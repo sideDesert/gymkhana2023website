@@ -31,6 +31,8 @@ import Navbar from "../components/Navbar";
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   </head>
   <body class=" h-[100vh]">
     <Navbar blackOn={blackOn} disableAnimation={disableAnimation} client:load />

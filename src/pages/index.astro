@@ -5,17 +5,12 @@ import members from "../images/members-small.jpg";
 import Card from "../components/Card.astro";
 import Gallery from "../components/Gallery.jsx";
 import Events from "../components/landing page/Events.astro";
+import Loader from "../components/Loader.astro";
 
 ---
 
 <Layout gutter={false} title="Gymkhana IIT Hyderabad" blackOn={false} disableAnimation={false}>
-  <div id='loader' class="h-[100vh] w-full fixed bg-p z-[70] flex justify-center items-center flex-col gap-5">
-    <div class="text-3xl text-white font-semibold"><h2>IITH Student Gymkhana</h2></div>
-    <div class="progress">
-      <div class="color"></div>
-    </div>
-    <div class="text-r text-xl"><h2>Loading...</h2></div>
-  </div>
+  <Loader client:load/>
   <section class="h-full w-full relative landing overflow-hidden hostel-container">
     <img
       src={hero}
@@ -82,8 +77,7 @@ import Events from "../components/landing page/Events.astro";
       <Gallery client:load />
     </div>
   </section>
-  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
-  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
   <script defer>
     console.log('hey')
     gsap.registerPlugin(ScrollTrigger)
@@ -130,49 +124,6 @@ import Events from "../components/landing page/Events.astro";
   .text-shadow{
     text-shadow: 0 0 8px black;
   }
-  #loader{
-    background : #190d57 ;
-    background-size: 80%;
-  }
-
-  .progress{
-    position: relative;
-    height: 7px;
-    width: 40%;
-    border: 10px solid #ff3b43;
-    border-radius: 15px;
-}
-.progress .color{
-    position: absolute;
-    background-color: #ffffff;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    top: -5px;
-    animation: progres 4s infinite linear;    
-}
-@keyframes progres{
-    0%{
-      width: 0%;
-    }
-    25%{
-        width: 50%;
-    }
-    50%{
-        width: 75%;
-    }
-    75%{
-        width: 85%;
-    }
-    100%{
-        width: 100%;
-    }
-};
+  
 
 </style>
-<script>
-
-  window.addEventListener('load',()=>{
-    gsap.to('#loader', {autoAlpha: 0, duration: 0.5})
-  })
-</script>

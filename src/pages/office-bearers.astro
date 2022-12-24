@@ -59,10 +59,11 @@ const imgId = {
     'Elan & nVision Overall Coordinator': 'elan.jpg'
 
 }     
-
+import Loader from "../components/Loader.astro";
 
 ---
 
+<Loader client:load title='Office Bearers IITH Gymkhana' text='Loading Images...'/>
 <Layout title='Office Bearers' blackOn={true}>
     <div class="py-8 px-6 bg-p">
         <ul class="lg:flex flex-row gap-8 hidden text-white text-xl button-parent">
@@ -94,8 +95,8 @@ const imgId = {
         </div>
 </Layout>
 <script defer='true'>
+
     //for setting all cards invisible
-    
 
     let activeYear = '2022';
     function showOfficeForCurrentYear(){

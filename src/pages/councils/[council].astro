@@ -32,6 +32,7 @@ import Sports from "../../components/council page/Sports"
 
 ---
 
+
 <CouncilsLayout desc={descList[council]} title={title} imgUrl={`/images/councils/${council}.svg`}>
     {council==='general' && <General client:load/>}
     {council==='cultural' && <Cultural client:load/>}
