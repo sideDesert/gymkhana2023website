@@ -8,8 +8,8 @@ export default interface Props{
     imgUrl ?: string
 }
 const {name,position, email, linkedin,mobile, imgUrl} = Astro.props;
-import facebookIcon from '../images/facebook-icon.svg';
-import emailIcon from '../images/email-icon.svg';
+import linkedinIcon from '../images/linkedinIcon.png';
+import emailIcon from '../images/email-icon.png';
 ---
 
 <div class="card h-[31.625rem] w-[18.75rem] bg-white flex flex-col rounded-[20px] items-center py-10 px-6 lg:mt-7 relative">
@@ -25,10 +25,10 @@ import emailIcon from '../images/email-icon.svg';
         {mobile !=='' && <div class="font-semibold my-6 text-[1.2rem] leading-5 text-r">(+91) {mobile}</div>}
     </div>
     <div class="absolute bottom-8">
-        <span class="inline-block h-[3rem] w-[3rem] mr-5">
-            <a href={linkedin} class="cursor-pointer"><img src={facebookIcon} alt="facebook" class="h-[4.5rem]"></a>
+        <span class="inline-block h-[4rem] w-[4rem] top-4 relative">
+            <a href={linkedin} class="cursor-pointer"><img src={linkedinIcon} alt="linkedin" class="object-fill"></a>
         </span>
-        <span class="inline-block h-[3rem] w-[3rem] ml-5">
+        <span class="inline-block h-[3rem] w-[3.9rem] ml-5">
            <a href={email} class="cursor-pointer"> <img src={emailIcon} alt="email" class="h-[4.5rem]"></a>
         </span>
     </div>
