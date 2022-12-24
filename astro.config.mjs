@@ -8,8 +8,11 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 import image from "@astrojs/image";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
+  output: "server",
+  adapter: vercel(),
 });
