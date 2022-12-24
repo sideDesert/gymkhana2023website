@@ -86,9 +86,9 @@ import Loader from "../components/Loader.astro";
             <div class="bg-g h-[6px] w-16 ml-16"></div>
           </div>
           <h2 class="text-white font-semibold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold">Office Bearers <span class="year-text">2022-23</span></h2>
-          {Object.keys(officeBearers).map(year=>{
+          {Object.keys(officeBearers).map((year, index)=>{
             return <section class={`year-${year} cards-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 justify-items-center gap-6 lg:px-[1rem] xl:px-[4rem] lg:pt-4 lg:mt-7 mt-7`}>
-                        {officeBearers[year].map(card=>(<OfficeBearerCard name={card.name} position={card.title} email={card.email} linkedin={card.linkedin} mobile={card.mobile} imgUrl={`/gymkhana-office/${year}/${imgId[card.title]}`}/>))}
+                        {officeBearers[year].map((card, index)=>(<OfficeBearerCard initial={index<4 ? true : false} name={card.name} position={card.title} email={card.email} linkedin={card.linkedin} mobile={card.mobile} imgUrl={`/gymkhana-office/${year}/${imgId[card.title]}`}/>))}
                     </section>
           })}
   
@@ -96,6 +96,36 @@ import Loader from "../components/Loader.astro";
 </Layout>
 <script defer='true'>
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+    
     //for setting all cards invisible
 
     let activeYear = '2022';

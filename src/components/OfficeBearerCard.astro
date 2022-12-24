@@ -5,9 +5,10 @@ export default interface Props{
     email?: string,
     linkedin?: string,
     mobile ?: string,
-    imgUrl ?: string
+    imgUrl ?: string,
+    initial ?: boolean
 }
-const {name,position, email, linkedin,mobile, imgUrl} = Astro.props;
+const {name,position, email, linkedin,mobile, imgUrl, initial=false} = Astro.props;
 import linkedinIcon from '../images/linkedinIcon.png';
 import emailIcon from '../images/email-icon.png';
 ---
@@ -16,7 +17,7 @@ import emailIcon from '../images/email-icon.png';
     
     <div class="flex">   
         <div class="h-[12.125rem] w-[12.125rem] bg-slate-300 rounded-full overflow-hidden">
-            <img src={imgUrl} alt="">
+            <img class="lazy" src={initial===true ? imgUrl : ''} data-src={imgUrl} alt={position} width={194} height={220}/>
         </div>
     </div>
     <div class="text-center text-2xl mt-5 flex flex-col">
