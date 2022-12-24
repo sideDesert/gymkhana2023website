@@ -97,8 +97,8 @@ import Loader from "../components/Loader.astro";
 <script defer='true'>
 
 document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages = document.querySelectorAll("img.lazy");    
-  var lazyloadThrottleTimeout;
+  let lazyloadImages = document.querySelectorAll("img.lazy");    
+  let lazyloadThrottleTimeout;
   
   function lazyload () {
     if(lazyloadThrottleTimeout) {
