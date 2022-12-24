@@ -1,0 +1,81 @@
+---
+export interface Props {
+  title: string;
+  blackOn?: boolean;
+  gutter?: boolean,
+  disableAnimation?: boolean
+}
+
+const { title, blackOn=true,gutter=true, disableAnimation=true } : Props = Astro.props;
+
+import Navbar from "../components/Navbar";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class=" h-[100vh]">
+    <Navbar blackOn={blackOn} disableAnimation={disableAnimation} client:load />
+    {gutter && <div class="w-full  h-[5rem]"></div>}
+    <slot />
+    <style is:global>
+      :root {
+        --red: #ff3b43;
+        --purple: #190d57;
+        --green: #07cebb;
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          var(--red) 30%,
+          var(--purple) 60%
+        );
+      }
+      .inactive{
+        background-color: var(--purple);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        color: white
+      }
+      .active{
+        background-color: white;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+    
+      html {
+        font-family: "Poppins", system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      body{
+        overflow-x: hidden;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+      .menu-items > li:last-child {
+        padding-bottom: 1rem;
+      }
+    </style>
+  </body>
+</html>

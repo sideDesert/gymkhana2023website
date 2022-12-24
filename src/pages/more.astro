@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Button } from "../components/Navbar";
+
+
+---
+<Layout title="More" gutter={false}>
+    <div class="bg-white w-full text-xl h-full flex justify-center items-center">
+        <ul class="text-center">
+            <li class="pt-3 menu-items"><a href='/transparence'><Button>Transparency</Button></a></li>
+            <li class="pt-3 menu-items"><a href='/election'><Button>Election</Button></a></li>
+            <li class="pt-3 menu-items"><a href='/cab-sharing'><Button>Cab Sharing</Button></a></li>
+            <li class="pt-3 menu-items"><a href='/forms'><Button>Forms</Button></a></li>
+        </ul>
+    </div>
+</Layout>
+

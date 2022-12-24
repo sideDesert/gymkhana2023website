@@ -1,0 +1,18 @@
+.swiper-button-next {
+    background-image: url(https://icons8.com/icon/100007/forward-button);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  .swiper-button-next::after {
+    display: none;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after{
+    display: none;
+  }
