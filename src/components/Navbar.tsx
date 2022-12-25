@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../images/logo.png";
 import WhiteLogo from '../images/logowhite.png';
 import Menu from "../images/menu.svg";
@@ -79,7 +79,10 @@ export function Button(props: {children: string}) {
 
 function MobileNavbar() {
   const [active, setActive] = useState<boolean>(false);
+  const scrollRef = useRef(0)
+  const prevScroll = useRef(0)
   const mobileMenuRef = useRef();
+  const mobileNavbar = useRef<any>(null)
   
   const activateMobileMenu = () => {
     setActive(true);
@@ -96,12 +99,35 @@ function MobileNavbar() {
     } else {
       document.body.style.overflowY = 'scroll';
     }
-
   },[active])
+
+  const getPosition  =()=>{
+    return window.scrollY
+  }
+
+  useLayoutEffect(()=>{
+    function handleScroll(){
+      scrollRef.current = getPosition()
+      if(scrollRef.current < prevScroll.current){
+        gsap.to(mobileNavbar.current, {
+          y: '0%'
+        })
+
+      }
+      if(scrollRef.current>prevScroll.current){
+        gsap.to(mobileNavbar.current, {
+          y:'-100%'
+        })
+      }
+      prevScroll.current = scrollRef.current
+    }
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
 
   return (
     <>
-      <nav className="bg-white flex justify-between px-4 py-2 w-full z-40 lg:hidden fixed">
+      <nav ref = {mobileNavbar} className="bg-white flex justify-between px-4 py-2 w-full z-40 lg:hidden fixed">
         <div>
           <a href='/'><div className="h-[4rem] w-[4rem] relative">
             <img src={Logo} alt="gymkhana logo" />
@@ -117,8 +143,8 @@ function MobileNavbar() {
         </button>
       </nav>
       {active && (
-        <div ref={mobileMenuRef} className="mobileMenu absolute z-40 w-full h-full ">
-          <div className="absolute right-5 top-5 text-lg">
+        <div ref={mobileMenuRef} className="mobileMenu fixed z-40 w-full h-full ">
+          <div className="fixed right-5 top-5 text-lg">
             <button onClick={deActivateMobileMenu}>Close</button>
           </div>
           <ul className="bg-white text-center pb-6 h-full flex-grow flex flex-col justify-center items-center">
