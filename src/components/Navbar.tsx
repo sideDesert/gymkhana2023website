@@ -101,7 +101,7 @@ function MobileNavbar() {
 
   return (
     <>
-      <nav className="bg-white flex justify-between px-4 py-2 w-full absolute z-40 lg:hidden">
+      <nav className="bg-white flex justify-between px-4 py-2 w-full z-40 lg:hidden fixed">
         <div>
           <a href='/'><div className="h-[4rem] w-[4rem] relative">
             <img src={Logo} alt="gymkhana logo" />
