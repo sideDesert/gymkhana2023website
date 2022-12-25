@@ -11,7 +11,7 @@ export function getStaticPaths(){
 }
 import Layout from "../../layouts/Layout.astro";
 import MobileView, { ecell } from "../../components/special clubs/MobileView";
-const buttonClass = 'text-w px-4 py-2 rounded-lg lg:text-2xl'
+const buttonClass = 'club-button text-w px-4 py-2 rounded-lg lg:text-2xl'
 import View from "../../components/special clubs/View.astro";
 import { elan,milan, tedx,sunshine } from "../../components/special clubs/MobileView";
 
@@ -50,7 +50,7 @@ const sunshineLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/v1671971
 let currentView = 'elan'
 let activeButton = 'elan'
 const views = document.querySelectorAll('.views')
-const buttons =  document.querySelectorAll('button')
+const buttons =  document.querySelectorAll('.club-button')
 
 function showViewForCurrentClub(){
     console.log(currentView)
