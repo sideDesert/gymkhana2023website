@@ -1,5 +1,5 @@
 import React from "react";
-const dummy = 'https://moneyformeaning.com/wp-content/uploads/2019/09/tedx-logo.png'
+import dummy from '../../images/diesta-big.png'
 const bg = 'https://www.tedxgangtok.com/assets/images/tedx-photo.jpg'
 import Options from "./Options";
 
@@ -20,11 +20,6 @@ function Diesta() {
         Introduced in 2021, Diesta is an annual Interdepartmental sports & cultural fest of IIT Hyderabad. All the departments are divided into 7-10 teams. All the teams put their best foot forward to take away the ultimate trophy, the glory of being the best of them all.
 
         </p>
-        <div className="my-8 justify-end lg:flex">
-        <a href='' target='_blank' rel='noopener noreferrer hidden'> <button className=" scale-90 disabled text-xl bg-[#ff2b06] text-white px-4 py-3 rounded-lg">
-          Navigate to Website
-        </button></a>
-        </div>
       </div>
       
       </div>

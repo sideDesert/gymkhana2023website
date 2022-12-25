@@ -1,0 +1,89 @@
+---
+export function getStaticPaths(){
+    return [
+        {params: {club: 'elan'}},
+        {params: {club: 'e-cell'}},
+        {params: {club: 'tedex'}},
+        {params: {club: 'sunshine'}},
+        {params: {club: 'milan'}},
+        {params: {club: 'FCC'}},
+    ]
+}
+import Layout from "../../layouts/Layout.astro";
+import MobileView, { ecell } from "../../components/special clubs/MobileView";
+const buttonClass = 'text-w px-4 py-2 rounded-lg lg:text-2xl'
+import View from "../../components/special clubs/View.astro";
+import { elan,milan, tedx,sunshine } from "../../components/special clubs/MobileView";
+
+const elanLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/c_scale,q_41,w_408/v1671967212/media%20council/cultural%20clubs/elan-black_hri8yx.png'
+const ecellLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/v1671970821/media%20council/cultural%20clubs/ecell-logo_rnbgb0.png'
+const tedxLogo = ''
+const milanLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/v1671733197/media%20council/milan_logo_og_rxtdnj.png'
+const fccLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/c_scale,h_316,q_53/v1671971536/media%20council/cultural%20clubs/fcc-logo_jwiah8.png'
+const sunshineLogo = 'https://res.cloudinary.com/dwsverefw/image/upload/v1671971814/media%20council/cultural%20clubs/sunshine-logo_pq1ipp.png'
+
+---
+
+<Layout title = {'Special Clubs'}>
+    <div class="sm:hidden"><MobileView client:visible/></div>
+    <div class="hidden sm:block">
+        <div class="bg-p h-[4rem] lg:py-[3rem] lg:px-3 w-full text-white flex justify-center lg:justify-start items-center">
+            <ul class="flex gap-4 buttonsBar">
+                <li><button data-club='elan' class={buttonClass + ' active'}>Elan & nVision</button></li>
+                <li><button data-club='tedx' class={buttonClass}>Tedx IITH</button></li>
+                <li><button data-club='ecell' class={buttonClass}>E-Cell</button></li>
+                <li><button data-club='milan' class={buttonClass}>Milan</button></li>
+                <li><button data-club='sunshine' class={buttonClass}>Sunshine</button></li>
+                <li><button data-club='fcc' class={buttonClass}>FCC</button></li>
+            </ul>
+        </div>
+    </div>
+    <div data-clubinfo = 'elan' class="block views"><View title='Elan & nVision' imgUrl={elanLogo} desc={elan} link={'https://elan.org.in'}/></div>
+    <div data-clubinfo = 'tedx' class="hidden views"><View title='Tedx' imgUrl={tedxLogo} desc={tedx} link={''}/></div>
+    <div data-clubinfo = 'ecell' class="hidden views"><View title='Entrepreneurship Cell' imgUrl={ecellLogo} desc={ecell} link={'https://ecell.iith.ac.in'}/></div>
+    <div data-clubinfo = 'milan' class="hidden views"><View title='Milan' imgUrl={milanLogo} desc={milan} link={'https://gymkhana.iith.ac.in/milan'}/></div>
+    <div data-clubinfo = 'sunshine' class="hidden views"><View title='Sunshine' imgUrl={sunshineLogo} desc={sunshine} link={'https://sunshine.iith.ac.in/'}/></div>
+    <div data-clubinfo = 'fcc' class="hidden views"><View title='Finance & Consulting Club' imgUrl={fccLogo} desc={''} link={''}/></div>
+</Layout>
+
+<script is:inline>
+let currentView = 'elan'
+let activeButton = 'elan'
+const views = document.querySelectorAll('.views')
+const buttons =  document.querySelectorAll('button')
+
+function showViewForCurrentClub(){
+    console.log(currentView)
+    for(let view of views){
+        if(view.dataset.clubinfo === currentView){
+            view.style.display = 'block'
+        } else {
+            view.style.display = 'none'
+        }
+    }
+}
+
+function activateButton(){
+    for( let button of buttons){
+        if(button.dataset.club === activeButton){
+            button.classList.add('active')
+        } else {
+            button.classList.remove('active')
+        }
+    }
+}
+
+for(let button of buttons){
+    button.addEventListener('click', (e)=>{
+        activeButton = e.target.dataset.club
+        currentView = activeButton
+
+        showViewForCurrentClub()
+        activateButton()
+    })
+
+
+
+}
+
+</script>

@@ -1,6 +1,6 @@
 import React from "react";
-const dummy = 'https://moneyformeaning.com/wp-content/uploads/2019/09/tedx-logo.png'
-const bg = 'https://www.tedxgangtok.com/assets/images/tedx-photo.jpg'
+const dummy = 'https://res.cloudinary.com/dwsverefw/image/upload/v1671962321/media%20council/Almuni-day-logo_w4pzmw.jpg'
+const bg = '/images/alumni day.jpg'
 import Options from "./Options";
 
 function AlumniDay() {
@@ -17,15 +17,14 @@ function AlumniDay() {
       </div>
       <div className="py-5 lg:col-span-3 self-center">
         <p className="lg:text-[1.25rem]">
-        Introduced in 2021, Diesta is an annual Interdepartmental sports & cultural fest of IIT Hyderabad. All the departments are divided into 7-10 teams. All the teams put their best foot forward to take away the ultimate trophy, the glory of being the best of them all.
+        Organised once every year, Alumni Day is a day specifically dedicated to the wonderful alums of IIT Hyderabad. Various events, ranging from cultural to technical to sports, are organised exclusively for the alums along with the campus tours. Exemplary alums are recognised by giving away awards in categories and special decennial celebrations are held for the batches completing 10 years of their graduation from IIT Hyderabad.
         </p>
-        <div className="my-8 justify-end lg:flex">
-        <a href='' target='_blank' rel='noopener noreferrer hidden hidden'> <button className=" scale-90 disabled text-xl bg-[#ff2b06] text-white px-4 py-3 rounded-lg">
+      <div className="my-8 justify-end lg:flex">
+        <a href='https://iith.ac.in/alumni-relations/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">
           Navigate to Website
         </button></a>
         </div>
       </div>
-      
       </div>
       
       <div className="h-full w-full absolute top-0 left-0 -z-10 blur-sm ">

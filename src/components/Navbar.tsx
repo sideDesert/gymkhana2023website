@@ -61,8 +61,8 @@ const updatedLinks:Link[] = [
   {parent:'Office Bearers',menuIndex: 1, href:'/office-bearers/'}, 
   {parent:'Councils', children: councilChildren,menuIndex: 2, href:'/councils/general'},
   {parent:'Events', children: eventsChildren,menuIndex: 3, href:'/events/elan'},
-  {parent:'Special Clubs', children: specialClubsChildren,menuIndex: 4, href:'/special-clubs'},
-  {parent: 'Fresher`s Guide',menuIndex: 5, href:'freshers-guide',},
+  {parent:'Special Clubs',menuIndex: 4, href:'/special-clubs'},
+  {parent:'Fresher`s Guide',menuIndex: 5, href:'freshers-guide',},
   {parent:'IITH Map',menuIndex: 6, href:'map'},
   {parent:'Gallery',menuIndex: 7, href:'gallery'},
   {parent:'More', children:moreChildren,menuIndex: 8, href:'/more'}
@@ -103,9 +103,9 @@ function MobileNavbar() {
     <>
       <nav className="bg-white flex justify-between px-4 py-2 w-full absolute z-40 lg:hidden">
         <div>
-          <div className="h-[4rem] w-[4rem] relative">
+          <a href='/'><div className="h-[4rem] w-[4rem] relative">
             <img src={Logo} alt="gymkhana logo" />
-          </div>
+          </div></a>
         </div>
         <button
           className="pr-2"  
@@ -171,9 +171,9 @@ function MainNavbar({blackOn, disableAnimation}){
     <>
   <nav ref={navRef} className={`fixed justify-between ${blackOn ? 'text-black bg-white':'text-white bg-transparent'} px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row`}  >
     <div className="inline-block">
-      <div className="h-[4rem] w-[4rem] relative ">
+      <a href='/'><div className="h-[4rem] w-[4rem] relative ">
         <img src={disableAnimation? Logo : (scrollPosition!==0 ? Logo : WhiteLogo)} alt="gymkhana logo" />
-      </div>
+      </div></a>
     </div>
     <div className="inline-block">
       <ul className="flex gap-5">

@@ -2,11 +2,11 @@
 export interface Props {
   title: string;
   blackOn?: boolean;
-  gutter?: boolean,
+  gutter?: boolean;
   disableAnimation?: boolean
 }
 
-const { title, blackOn=true,gutter=true, disableAnimation=true } : Props = Astro.props;
+const { title='Gymkhana', blackOn=true,gutter=true, disableAnimation=true } : Props = Astro.props;
 
 import Navbar from "../components/Navbar";
 ---
@@ -80,4 +80,50 @@ import Navbar from "../components/Navbar";
       }
     </style>
   </body>
+  <footer class=" text-white w-full">
+    <div class="grid grid-cols-1 md:grid-cols-5 p-6 gap-4 bg-[#0C062A]">
+      <div class="grid md:col-span-2  md:grid-cols-2 gap-4">
+        <div class="md:col-span-1 col-span-1">
+          <h2 class="font-bold">Quick Links</h2>
+          <ul>
+            <li><a href="https://iith.ac.in/">IIT Hyderabad</a></li>
+            <li><a href="https://elan.org.in/">Elan & nVision</a></li>
+            <li><a href="https://ecell.iith.ac.in/">Entrepreneurship Cell</a></li>
+            <li><a href="https://nss.iith.ac.in/">National Service Scheme</a></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <ul>
+            <li class="pointer-events-none hidden md:block">‎ </li>
+            <li><a href="https://gymkhana.iith.ac.in/milan">Milan 2023</a></li>
+            <li><a href="https://hostel.iith.ac.in/">IITH Hostels</a></li>
+            <li><a href="https://sva.iith.ac.in/">SVA Portal</a></li>
+            <li><a href="https://ocs.iith.ac.in/">Office of Career Counselling</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="md:col-span-2">
+        <h2 class="font-bold">Contact Us</h2>
+        <address>
+          Indian Institute of technology Hyderabad <br>
+        Near NH-65, Sangareddy, kandi, Telangana 502285 <br>
+        <div><span class="font-bold">Phone: </span>(+91) 6266875616</div>
+        <div><span class="font-bold">Mail us at: </span>media_secy@gymkhana.iith.ac.in</div>
+
+        </address>
+      </div>
+
+      
+
+      <div class="md:col-span-1">
+        <h2 class="font-bold">Our Handles</h2>
+      </div>
+    </div>
+
+    <div class="bg-[#190D57] flex p-3 justify-center">
+      Copyrights ⓒ 2023 Gymkhana IIT Hyderabad
+    </div>
+  </footer>
 </html>

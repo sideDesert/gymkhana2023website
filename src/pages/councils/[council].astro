@@ -29,13 +29,17 @@ import General from "../../components/council page/General"
 import Cultural from "../../components/council page/Cultural"
 import Media from '../../components/council page/Media'
 import Sports from "../../components/council page/Sports"
+import Mess from "../../components/council page/Mess"
+import Scitech from "../../components/council page/Scitech"
 
 ---
 
 
-<CouncilsLayout desc={descList[council]} title={title} imgUrl={`/images/councils/${council}.svg`}>
+<CouncilsLayout desc={descList[council]} title={title} imgUrl={`/images/councils/${council}.png`}>
     {council==='general' && <General client:load/>}
     {council==='cultural' && <Cultural client:load/>}
     {council==='media' && <Media client:load/>}
     {council==='sports' && <Sports client:load/>}
+    {council==='mess' && <Mess/>}
+    {council==='scitech' && <Scitech/>}
 </CouncilsLayout>

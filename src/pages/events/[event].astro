@@ -5,6 +5,8 @@ import Elan from '../../components/events page/Elan'
 import Esummit from "../../components/events page/Esummit";
 import Tedex from "../../components/events page/Tedex";
 import Milan from "../../components/events page/Milan";
+import AlumniDay from "../../components/events page/AlumniDay";
+import Diesta from "../../components/events page/Diesta";
 export function getStaticPaths(){
     return [
         {params: {event: 'elan'}},
@@ -34,4 +36,6 @@ const titles = {
     {event === 'elan' && <Elan client:visible/>}
     {event==='e-summit' && <Esummit client:visible/>}
     {event==='milan' && <Milan client:visible/>}
+    {event==='almuni-day' && <AlumniDay/>}
+    {event==='diesta' && <Diesta/>}
 </Layout>
