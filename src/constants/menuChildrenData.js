@@ -26,7 +26,7 @@ export const specialClubsChildren = [
 ];
 
 export const moreChildren = [
-  // { name: "Election", href: "/election" },
+  { name: "Docs and Consitutions", href: "/docs" },
   { name: "Forms", href: "/forms" },
-  // { name: "Cab Sharing", href: "/cab-sharing" },
+  { name: "Research Scholars", href: "https://researchers-iith.netlify.app/" },
 ];

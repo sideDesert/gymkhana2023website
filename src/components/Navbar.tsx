@@ -63,8 +63,8 @@ const updatedLinks:Link[] = [
   {parent:'Events', children: eventsChildren,menuIndex: 3, href:'/events/elan'},
   {parent:'Special Clubs',menuIndex: 4, href:'/special-clubs'},
   {parent:'Fresher`s Guide',menuIndex: 5, href:'freshers-guide',},
-  {parent:'IITH Map',menuIndex: 6, href:'map'},
-  {parent:'Gallery',menuIndex: 7, href:'gallery'},
+  {parent:'IITH Map',menuIndex: 6, href:'/map'},
+  {parent:'Gallery',menuIndex: 7, href:'/gallery'},
   {parent:'More', children:moreChildren,menuIndex: 8, href:'/more'}
 ]
 
@@ -108,7 +108,7 @@ function MobileNavbar() {
   useLayoutEffect(()=>{
     function handleScroll(){
       scrollRef.current = getPosition()
-      if(scrollRef.current < prevScroll.current){
+      if(scrollRef.current <= prevScroll.current){
         gsap.to(mobileNavbar.current, {
           y: '0%'
         })
@@ -208,7 +208,7 @@ function MainNavbar({blackOn, disableAnimation}){
     </div>
   </nav>
 {activeSubMenu && 
-  <div ref={subMenuRef} className="bg-white text-black inline-block fixed z-40" style={{left:activeSubMenu !== 8 ? left: left-93, top:top+60}}>
+  <div ref={subMenuRef} className="bg-white text-black inline-block fixed z-40" style={{left:activeSubMenu !== 8 ? left: left-165, top:top+60}}>
     <ul className="text-md">
       {updatedLinks[activeSubMenu].children.map((el)=>(
       <a href={el.href} key ={el.href}><li  className='pl-3 pr-5 py-2 '>{el.name}</li></a>
