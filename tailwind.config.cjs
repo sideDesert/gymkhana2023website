@@ -7,7 +7,7 @@ module.exports = {
         r: "#ff3b43",
         p: "#190d57",
         g: "#07cebb",
-        w: "#f6f6f6",
+        w: "#ffffff",
       },
     },
     boxShadow: {

@@ -3,9 +3,9 @@ import React from 'react'
 function Mess() {
   return (
     <div>
-        <h2 className='lg:text-4xl text-3xl font-bold text-center text-black lg:text-left'>Mess Secretaries</h2>
+        <h2 className='lg:text-4xl text-3xl font-bold text-center text-black lg:text-left'>Mess Secretary</h2>
         <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start' >
-            <div className='bg-white text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl'>
+            <div className='bg-white text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl border-[0.25rem] border-g'>
               <h4 className=' text-p'>Mess Secretary </h4>
               <h3 className='lg:text-2xl text-xl font-semibold text-black'>Vaidesh Kodi</h3>
               <address className='pt-3'>

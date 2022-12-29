@@ -14,7 +14,7 @@ const links = [
   "Councils",
   "Events",
   "Special Clubs",
-  "Fresher's Guide",
+  "Student's Guide",
   "IITH Map",
   "Gallery",
   "More",
@@ -61,11 +61,11 @@ const updatedLinks:Link[] = [
   {parent:'Office Bearers',menuIndex: 1, href:'/office-bearers/'}, 
   {parent:'Councils', children: councilChildren,menuIndex: 2, href:'/councils/general'},
   {parent:'Events', children: eventsChildren,menuIndex: 3, href:'/events/elan'},
-  {parent:'Special Clubs',menuIndex: 4, href:'/special-clubs'},
-  {parent:'Fresher`s Guide',menuIndex: 5, href:'freshers-guide',},
-  {parent:'IITH Map',menuIndex: 6, href:'/map'},
-  {parent:'Gallery',menuIndex: 7, href:'/gallery'},
-  {parent:'More', children:moreChildren,menuIndex: 8, href:'/more'}
+  {parent:'Organization Clubs',menuIndex: 4, href:'/special-clubs'},
+  {parent:'Student\'s Guide',menuIndex: 5, href:'freshers-guide',},
+  // {parent:'IITH Map',menuIndex: 6, href:'/map'},
+  {parent:'Gallery',menuIndex: 6, href:'/gallery'},
+  {parent:'More', children:moreChildren,menuIndex: 7, href:'/more'}
 ]
 
 export function Button(props: {children: string}) {
@@ -97,7 +97,7 @@ function MobileNavbar() {
       document.body.style.overflowY = 'hidden'
       gsap.from(mobileMenuRef.current, {autoAlpha:0, stagger: 0.1})
     } else {
-      document.body.style.overflowY = 'scroll';
+      document.body.style.overflowY = 'auto';
     }
   },[active])
 
@@ -208,10 +208,10 @@ function MainNavbar({blackOn, disableAnimation}){
     </div>
   </nav>
 {activeSubMenu && 
-  <div ref={subMenuRef} className="bg-white text-black inline-block fixed z-40" style={{left:activeSubMenu !== 8 ? left: left-165, top:top+60}}>
+  <div ref={subMenuRef} className="bg-white text-black inline-block fixed z-40" style={{left:activeSubMenu !== 7 ? left: left-165, top:top+60}}>
     <ul className="text-md">
       {updatedLinks[activeSubMenu].children.map((el)=>(
-      <a href={el.href} key ={el.href}><li  className='pl-3 pr-5 py-2 '>{el.name}</li></a>
+      <a href={el.href} key ={el.href} className='hover:bg-slate-300'><li className='pl-3 pr-5 py-2 hover:bg-slate-100 transition-all'>{el.name}</li></a>
       ))}
     </ul>
   </div>

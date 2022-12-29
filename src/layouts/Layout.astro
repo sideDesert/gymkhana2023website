@@ -3,10 +3,11 @@ export interface Props {
   title: string;
   blackOn?: boolean;
   gutter?: boolean;
-  disableAnimation?: boolean
+  disableAnimation?: boolean;
+  footerActive?: boolean;
 }
 
-const { title='Gymkhana', blackOn=true,gutter=true, disableAnimation=true } : Props = Astro.props;
+const { title='Gymkhana', blackOn=true,gutter=true, disableAnimation=true, footerActive = true } : Props = Astro.props;
 
 import Navbar from "../components/Navbar";
 ---
@@ -34,7 +35,7 @@ import Navbar from "../components/Navbar";
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   </head>
-  <body class=" h-[100vh]">
+  <body class="">
     <Navbar blackOn={blackOn} disableAnimation={disableAnimation} client:load />
     {gutter && <div class="w-full  h-[5rem]"></div>}
     <slot />
@@ -66,7 +67,7 @@ import Navbar from "../components/Navbar";
     
       html {
         font-family: "Poppins", system-ui, sans-serif;
-        background-color: #f6f6f6;
+        background-color: #fff;
       }
       body{
         overflow-x: hidden;
@@ -80,7 +81,7 @@ import Navbar from "../components/Navbar";
       }
     </style>
   </body>
-  <footer class=" text-white w-full">
+  {footerActive && <footer class=" text-white w-full">
     <div class="grid grid-cols-1 md:grid-cols-5 p-6 lg: bg-[#0C062A]">
       <div class="grid md:col-span-2  md:grid-cols-2 gap-4">
         <div class="md:col-span-col-span-1">
@@ -126,5 +127,5 @@ import Navbar from "../components/Navbar";
     <div class="bg-[#190D57] flex p-3 justify-center">
       Copyrights ⓒ 2023 Gymkhana IIT Hyderabad
     </div>
-  </footer>
+  </footer>}
 </html>
