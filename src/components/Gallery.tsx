@@ -1,19 +1,25 @@
 import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation,Autoplay } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/navigation";
-import 'swiper/css/autoplay'
+import "swiper/css/autoplay";
 
-import './Gallery.css'
+import "./Gallery.css";
 
 // import required modules
 
 export default function Gallery() {
+  const image1 = "images/gallery/0.jpg";
+  const image2 = "images/gallery/1.jpg";
+  const image3 = "images/gallery/2.jpg";
+  const image4 = "images/gallery/3.jpg";
+  const image5 = "images/gallery/4.jpg";
+  const images = [image1, image2, image3, image4, image5];
   return (
     <>
       <Swiper
@@ -24,18 +30,16 @@ export default function Gallery() {
           clickable: true,
         }}
         autoHeight={true}
-        modules={[Pagination,Navigation, Autoplay]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper text-black w-full h-auto md:max-w-3xl"
       >
-        <SwiperSlide className="bg-white">
-        <img src="https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80" alt="people" />
-        </SwiperSlide>
-        <SwiperSlide className="bg-white">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="people" />
-        </SwiperSlide>
-        <SwiperSlide className="bg-white">
-        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="people" />
-        </SwiperSlide>
+        {images.map((src, index) => {
+          return (
+            <SwiperSlide className="bg-white">
+              <img src={src} alt="" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </>
   );
