@@ -6,7 +6,7 @@ export function getStaticPaths() {
     { params: { club: "tedex" } },
     { params: { club: "sunshine" } },
     { params: { club: "milan" } },
-    { params: { club: "FCC" } },
+    // { params: { club: "FCC" } },
   ];
 }
 import Layout from "../../layouts/Layout.astro";
@@ -21,16 +21,17 @@ import {
 } from "../../components/special clubs/MobileView";
 
 const elanLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,q_41,w_408/v1671967212/media%20council/cultural%20clubs/elan-black_hri8yx.png";
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775739/media%20council/orgs/el-org_gl5t0b.jpg";
 const ecellLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/v1671970821/media%20council/cultural%20clubs/ecell-logo_rnbgb0.png";
-const tedxLogo = "/images/Tedx logo.png";
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775121/media%20council/orgs/e-org_b0tgvj.jpg";
+const tedxLogo =
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775489/media%20council/orgs/t-org_g1scrw.jpg";
 const milanLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/v1671733197/media%20council/milan_logo_og_rxtdnj.png";
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672774996/media%20council/orgs/m-org_wwyhcs.jpg";
 const fccLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,h_316,q_53/v1671971536/media%20council/cultural%20clubs/fcc-logo_jwiah8.png";
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775388/media%20council/orgs/f-org_q2z8vx.jpg";
 const sunshineLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/v1671971814/media%20council/cultural%20clubs/sunshine-logo_pq1ipp.png";
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775270/media%20council/orgs/s-ord_d7n8eb.jpg";
 ---
 
 <Layout title={"Special Clubs"}>
@@ -51,7 +52,7 @@ const sunshineLogo =
         <li>
           <button data-club="sunshine" class={buttonClass}>Sunshine</button>
         </li>
-        <li><button data-club="fcc" class={buttonClass}>FCC</button></li>
+        <!-- <li><button data-club="fcc" class={buttonClass}>FCC</button></li> -->
       </ul>
     </div>
   </div>
@@ -64,7 +65,12 @@ const sunshineLogo =
     />
   </div>
   <div data-clubinfo="tedx" class="hidden views">
-    <View title="Tedx" imgUrl={tedxLogo} desc={tedx} link={""} />
+    <View
+      title="Tedx"
+      imgUrl={tedxLogo}
+      desc={tedx}
+      link={"https://tedxiithyderabad.iith.ac.in"}
+    />
   </div>
   <div data-clubinfo="ecell" class="hidden views">
     <View
@@ -90,14 +96,14 @@ const sunshineLogo =
       link={"https://sunshine.iith.ac.in/"}
     />
   </div>
-  <div data-clubinfo="fcc" class="hidden views">
+  <!-- <div data-clubinfo="fcc" class="hidden views">
     <View
       title="Finance & Consulting Club"
       imgUrl={fccLogo}
       desc={""}
       link={""}
     />
-  </div>
+  </div> -->
 </Layout>
 
 <script is:inline>
