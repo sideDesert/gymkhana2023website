@@ -38,8 +38,143 @@ const Web = [];
 const Int = [];
 const Events = [];
 
-const team = {
-  PR: ["Public Relations & Networking Team", PR],
+const teams = {
+  PR: [
+    ["Kuntal Suman", "+91-8578001808", "ce21btech11022@iith.ac.in", "head"],
+    [
+      "Nakul Garg",
+      "+91-9354662767",
+      "me21btech11035@iith.ac.in",
+      "coordinator",
+    ],
+    ["Sreyaa", "+91-9391322582", "ce21btech11038@iith.ac.in", "coordinator"],
+    [
+      "Hadi Afnan",
+      "+91-7994344759",
+      "ms20btech11009@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Kartik katekar",
+      "+91-7083797250",
+      "me21btech11024@iith.ac.in",
+      "coordinator",
+    ],
+  ],
+  Design: [
+    ["Prachi Anand", "+91-9867166443", "md21mdes14031@iith.ac.in", "head"],
+    [
+      "Gatikrushna Mohapatra",
+      "+91-7205869973",
+      "bd21bdes11008@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Anand Sharma",
+      "+91-9111280778",
+      "ic21btech11002@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Boda Premchand",
+      "+91-7013640047",
+      "bd21bdes11006@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Digjoy Nandi",
+      "+91-9706709050",
+      "ai20btech11007@iith.ac.in",
+      "coordinator",
+    ],
+  ],
+  Content: [
+    ["Suvitti", "+91-8901028748", "ai21resch11005@iith.ac.in", "head"],
+    [
+      "Bhanu Teja Reddy chemikala",
+      "+91-9346570712",
+      "es20btech11010@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Abhijit Kasle",
+      "+91-9112137266",
+      "ep21btech11002@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Supriya Rawat",
+      "+91-9068270073",
+      "ma21mscst11004@iith.ac.in",
+      "coordinator",
+    ],
+  ],
+  Web: [
+    ["Siddarth Saha", "+91-9810552384", "ce21btech11039@iith.ac.in", "head"],
+  ],
+  ICT: [
+    ["Nandini Louganee", "+91-9717588840", "md21mdes14019@iith.ac.in", "head"],
+    [
+      "Amulya Tallamraju",
+      "+91-9542695808",
+      "ai20btech11003@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Palthi Bhargav",
+      "+91-9959912411",
+      "bm21btech11017@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "A. Aaryan Kumar",
+      "+91-7995761724",
+      "ms21btech11017@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Harthik Kancham",
+      "+91-9154641925",
+      "ee21btech11023@iith.ac.in",
+      "coordinator",
+    ],
+  ],
+  Events: [
+    ["Uday Ratna", "+91-9989795055", "ee20btech11039@iith.ac.in", "head"],
+    [
+      "Nikhil Singampalli",
+      "+91-9492476086",
+      "me20btech11042@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Aryan Sharan Reddy",
+      "+91-83740 64960",
+      "bt21btech11002@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "B.Charan Chandra",
+      "+91-9398577068",
+      "me20btech11014@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Harshitha jallarapu",
+      "+91-8520872747",
+      "ms21btech11017@iith.ac.in",
+      "coordinator",
+    ],
+  ],
+};
+
+const teamTitles = {
+  PR: "Public Relations & Networking Team",
+  Design: "Design Team",
+  Web: "Web Development Team",
+  ICT: "Interview & Hosting Team",
+  Content: "Content Team",
+  Events: "Events Team",
 };
 
 function Media() {
@@ -69,19 +204,19 @@ function Media() {
         <h2 className="mt-9 lg:text-4xl text-3xl font-bold text-center text-black lg:text-left">
           Team
         </h2>
-        {Object.keys(team).map((key, index) => {
-          const info = team[key];
+        {Object.keys(teams).map((key, index) => {
+          const info = teams[key];
           return (
             <>
-              <h3 className="font-semibold text-3xl mt-5">{info[0]}</h3>
+              <h3 className="font-semibold text-3xl mt-5">{teamTitles[key]}</h3>
               <div className="flex flex-wrap gap-6 flex-col md:flex-row">
-                {info[1].map((member) => {
+                {info.map((member) => {
                   return (
                     <TCard
-                      name={member.name}
-                      mobile={member.mobile}
-                      email={member.mail}
-                      position={member.position}
+                      name={member[0]}
+                      mobile={member[1]}
+                      email={member[2]}
+                      position={member[3]}
                     />
                   );
                 })}

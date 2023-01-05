@@ -12,7 +12,7 @@ export const eventsChildren = [
   { name: "E-Summit", href: "/events/e-summit" },
   { name: "Milan", href: "/events/milan" },
   { name: "Ted-Talks", href: "/events/ted-talks" },
-  { name: "Abhyanmt", href: "/events/abhyant" },
+  { name: "Abhyant", href: "/events/abhyant" },
   { name: "Diesta", href: "/events/diesta" },
   { name: "Alumni Day", href: "/events/almuni-day" },
 ];
