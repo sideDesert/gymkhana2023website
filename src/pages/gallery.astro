@@ -79,10 +79,10 @@ const imgArrayData = images;
 </Layout>
 
 <button
-  class="hidden left w-11 h-11 rounded-full fixed bg-white top-[50%] left-[2vw] z-[80]"
+  class="hidden left w-11 h-11 rounded-full fixed bg-white top-[50%] left-[2vw] z-[80] button-prev"
 ></button>
 <button
-  class="hidden right w-11 h-11 rounded-full fixed bg-white top-[50%] right-[2vw] z-[80]"
+  class="hidden right w-11 h-11 rounded-full fixed bg-white top-[50%] right-[2vw] z-[80] button-next"
 ></button>
 
 <div
@@ -107,6 +107,21 @@ const imgArrayData = images;
   >
   </div>
 </div>
+
+<style>
+  .button-next {
+    background-image: url(https://cdn2.iconfinder.com/data/icons/font-awesome/1792/angle-right-512.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  .button-prev {
+    background-image: url(https://cdn2.iconfinder.com/data/icons/font-awesome/1792/angle-left-512.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+</style>
 
 <script is:inline>
   const images = document.querySelectorAll(".image");
