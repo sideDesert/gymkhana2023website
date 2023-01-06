@@ -6,6 +6,7 @@ export function getStaticPaths() {
     { params: { club: "tedex" } },
     { params: { club: "sunshine" } },
     { params: { club: "milan" } },
+    { params: { club: "ebsb" } },
     // { params: { club: "FCC" } },
   ];
 }
@@ -18,6 +19,7 @@ import {
   milan,
   tedx,
   sunshine,
+  ebsb,
 } from "../../components/special clubs/MobileView";
 
 const elanLogo =
@@ -28,10 +30,12 @@ const tedxLogo =
   "https://res.cloudinary.com/dwsverefw/image/upload/v1672775489/media%20council/orgs/t-org_g1scrw.jpg";
 const milanLogo =
   "https://res.cloudinary.com/dwsverefw/image/upload/v1672774996/media%20council/orgs/m-org_wwyhcs.jpg";
-const fccLogo =
-  "https://res.cloudinary.com/dwsverefw/image/upload/v1672775388/media%20council/orgs/f-org_q2z8vx.jpg";
+// const fccLogo =
+//   "https://res.cloudinary.com/dwsverefw/image/upload/v1672775388/media%20council/orgs/f-org_q2z8vx.jpg";
 const sunshineLogo =
   "https://res.cloudinary.com/dwsverefw/image/upload/v1672775270/media%20council/orgs/s-ord_d7n8eb.jpg";
+const ebsbLogo =
+  "https://res.cloudinary.com/dwsverefw/image/upload/v1672987624/ecell/ebsb_cqwr9e.jpg";
 ---
 
 <Layout title={"Special Clubs"}>
@@ -52,11 +56,11 @@ const sunshineLogo =
         <li>
           <button data-club="sunshine" class={buttonClass}>Sunshine</button>
         </li>
-        <!-- <li><button data-club="fcc" class={buttonClass}>FCC</button></li> -->
+        <li><button data-club="ebsb" class={buttonClass}>EBSB</button></li>
       </ul>
     </div>
   </div>
-  <div data-clubinfo="elan" class="block views">
+  <div data-clubinfo="elan" class="hidden sm:block views">
     <View
       title="Elan & nVision"
       imgUrl={elanLogo}
@@ -96,14 +100,14 @@ const sunshineLogo =
       link={"https://sunshine.iith.ac.in/"}
     />
   </div>
-  <!-- <div data-clubinfo="fcc" class="hidden views">
+  <div data-clubinfo="ebsb" class="hidden views">
     <View
-      title="Finance & Consulting Club"
-      imgUrl={fccLogo}
-      desc={""}
-      link={""}
+      title="Ek Bharat Shresht Bharat"
+      imgUrl={ebsbLogo}
+      desc={ebsb}
+      link={"https://ebsb.iith.ac.in/"}
     />
-  </div> -->
+  </div>
 </Layout>
 
 <script is:inline>
