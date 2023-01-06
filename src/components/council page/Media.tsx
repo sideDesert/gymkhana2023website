@@ -200,7 +200,7 @@ function Media() {
           </address>
         </div>
       </div>
-      <div>
+      <div className="mx-5">
         <h2 className="mt-9 lg:text-4xl text-3xl font-bold text-center text-black lg:text-left">
           Team
         </h2>
