@@ -2,62 +2,61 @@
 import CouncilsLayout from "../layouts/CouncilsLayout.astro";
 import General from "../components/council page/General";
 import Cultural from "../components/council page/Cultural";
-
+import Scitech from "../components/council page/Scitech";
 
 const councils = {
-    academic:{
-        title: 'Academic Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    scitech:{
-        title: 'Sci-tech Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    mess:{
-        title: 'Mess Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    sports:{
-        title: 'Sports Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    media:{
-        title: 'Media Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    cultural:{
-        title: 'Cultural Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-    literary:{
-        title: 'Literary Council',
-        desc: 'The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:',
-    },
-}
-
+  academic: {
+    title: "Academic Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  scitech: {
+    title: "Sci-tech Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  mess: {
+    title: "Mess Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  sports: {
+    title: "Sports Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  media: {
+    title: "Media Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  cultural: {
+    title: "Cultural Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+  literary: {
+    title: "Literary Council",
+    desc: "The General Council is an umbrella term for various bodies which not only perform representation tasks,but also cater to student welfare,societies,entertainments etc.,The General Council is leaded by two General Secretaries.One shall be girl student and another a boy.Mess Secretaries,Transport Heads and Hostel Representatives constitute the rest of the Council.The General council strives towards general welfare of the students.It works towards giving students at IITH,the best stay possible. There are four domains under two general secretaries:",
+  },
+};
 ---
 
-<CouncilsLayout desc='general' imgUrl='hello' title='title'>
-    <div class="general-additional hidden w-full">
-        <General client:load/>
-    </div>
+<CouncilsLayout desc="general" imgUrl="hello" title="title">
+  <div class="general-additional hidden w-full">
+    <General client:load />
+  </div>
 
-    <div class="cultural-additional hidden col-span-6 w-full">
-        <Cultural client:load/>
-    </div>
+  <div class="cultural-additional hidden col-span-6 w-full">
+    <Cultural client:load />
+  </div>
+  <div class=""></div>
 </CouncilsLayout>
-<script is:inline defer='true'>
-    window.addEventListener('load', ()=>{
-        switch(council){
-            case 'general':
-                document.querySelector('.general-additional').style.display = 'block'
-                break;
-            case 'cultural':
-            document.querySelector('.cultural-additional').style.display = 'block'
-                break;
-            default:
-                break;
-                
-        }
-    })
+<script is:inline defer="true">
+  window.addEventListener("load", () => {
+    switch (council) {
+      case "general":
+        document.querySelector(".general-additional").style.display = "block";
+        break;
+      case "cultural":
+        document.querySelector(".cultural-additional").style.display = "block";
+        break;
+      default:
+        break;
+    }
+  });
 </script>
