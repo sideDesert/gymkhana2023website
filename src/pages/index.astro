@@ -6,6 +6,7 @@ import Card from "../components/Card.astro";
 import Gallery from "../components/Gallery.jsx";
 import Events from "../components/landing page/Events.astro";
 import Loader from "../components/Loader.astro";
+import UpdatesSection from "../components/UpdatesSection";
 ---
 
 <Layout
@@ -74,6 +75,7 @@ import Loader from "../components/Loader.astro";
       </p>
     </div>
   </section>
+  <UpdatesSection client:load />
   <section class="bg-p p-5 px-7 flex flex-col lg:py-[3rem]">
     <div class="bg-r h-[6px] w-full self-center">
       <div class="bg-g h-[6px] w-16 ml-16"></div>

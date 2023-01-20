@@ -17,6 +17,8 @@ export const milan =
   '"Milan" is the annual techno-cultural-sports General Championship of IIT Hyderabad. It consists of 19 Sports, 18 Cultural and 11 technical events conducted between all the hostel blocks. In this second edition of Milan, presented by SBI YONO, the sports, cultural, and technical events will start from 9th September and will conclude on 18th September';
 export const ebsb =
   "EBSB is a programme for promoting national integration through systematic exchange between paired institutes in the cultural, literary and linguistic fields. We intend to learn the linguistic and cultural aspects of the home state of our paired institute, covering history, culture, language, cuisine, festivals, clothing etc. The EBSB club has been formed at IITH to carry forward activities under the programme with our paired institute, IIT Kanpur. We aim to celebrate a plethora of Indian festivals and customs (paying special attention to those of Uttar Pradesh) in ways which are both enjoyable and informative which would thereby educate our fellow students while having fun.";
+export const eml =
+  "We, the Extra Mural Lectures team at IIT Hyderabad, work in bringing decorated personalities from eclectic domains on one platform to talk about various subjects like art, social work, economics, psychology, sports, science etc and inspire our IIT Hyderabad fraternity with insights that they could induce in their lives. LEARN BEYOND THE FOUR WALLS OF CLASSROOM";
 
 function MobileView() {
   return (

@@ -1,15 +1,4 @@
 ---
-export function getStaticPaths() {
-  return [
-    { params: { club: "elan" } },
-    { params: { club: "e-cell" } },
-    { params: { club: "tedex" } },
-    { params: { club: "sunshine" } },
-    { params: { club: "milan" } },
-    { params: { club: "ebsb" } },
-    // { params: { club: "FCC" } },
-  ];
-}
 import Layout from "../../layouts/Layout.astro";
 import MobileView, { ecell } from "../../components/special clubs/MobileView";
 const buttonClass = "club-button text-w px-4 py-2 rounded-lg lg:text-2xl";
@@ -20,6 +9,7 @@ import {
   tedx,
   sunshine,
   ebsb,
+  eml,
 } from "../../components/special clubs/MobileView";
 
 const elanLogo =
@@ -57,6 +47,7 @@ const ebsbLogo =
           <button data-club="sunshine" class={buttonClass}>Sunshine</button>
         </li>
         <li><button data-club="ebsb" class={buttonClass}>EBSB</button></li>
+        <li><button data-club="eml" class={buttonClass}>EML</button></li>
       </ul>
     </div>
   </div>
@@ -106,6 +97,14 @@ const ebsbLogo =
       imgUrl={ebsbLogo}
       desc={ebsb}
       link={"https://ebsb.iith.ac.in/"}
+    />
+  </div>
+  <div data-clubinfo="eml" class="hidden views">
+    <View
+      title="Extra Mural Lectures"
+      imgUrl={"/eml logo.png"}
+      desc={eml}
+      link={"https://eml.iith.ac.in/"}
     />
   </div>
 </Layout>
