@@ -87,6 +87,13 @@ function MobileView() {
             desc={ebsb}
           ></Card>
         </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            title="Extra Mural Lectures"
+            imgUrl="/eml logo.png"
+            desc={eml}
+          ></Card>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

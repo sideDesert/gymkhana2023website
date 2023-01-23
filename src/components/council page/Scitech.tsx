@@ -353,7 +353,7 @@ function Card({ title, imgUrl, desc }) {
 
 function ScitechMobile() {
   return (
-    <div className="lg:hidden">
+    <div className="hidden">
       <Swiper
         loop={true}
         autoHeight={true}
