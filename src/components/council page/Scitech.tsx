@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TCard from "./teamCard";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 interface club {
   name: string;
@@ -205,7 +206,7 @@ function Scitech() {
             </address>
           </div>
         </div>
-        <h2 className="lg:text-4xl text-4xl font-bold text-center text-black lg:text-left mt-[2rem] mb-[1rem]">
+        <h2 className="hidden lg:block lg:text-4xl text-4xl font-bold text-center text-black lg:text-left mt-[2rem] mb-[1rem]">
           Clubs
         </h2>
         <div className="lg:grid lg:grid-cols-5 pt-4 hidden z-0 relative">
@@ -328,9 +329,7 @@ function Scitech() {
           </div>
         </div>
       </div>
-      <div>
-        <ScitechMobile />
-      </div>
+      <div></div>
     </React.Fragment>
   );
 }
@@ -347,72 +346,6 @@ function Card({ title, imgUrl, desc }) {
       <div className="">
         <p>{desc}</p>
       </div>
-    </div>
-  );
-}
-
-function ScitechMobile() {
-  return (
-    <div className="hidden">
-      <Swiper
-        loop={true}
-        autoHeight={true}
-        slidesPerView={"auto"}
-        centeredSlides={true}
-        spaceBetween={20}
-        navigation={true}
-        className="[&>div]:w-[80%]"
-      >
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Infocus"}
-            desc={clubs[0].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Litsoc"}
-            desc={clubs[1].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Behind The Lens"}
-            desc={clubs[2].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Vibes"}
-            desc={clubs[3].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Shuffle"}
-            desc={clubs[4].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Gesture"}
-            desc={clubs[5].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["aero"]}
-            title={"Rang de Manch"}
-            desc={clubs[6].desc}
-          />
-        </SwiperSlide>
-      </Swiper>
     </div>
   );
 }
