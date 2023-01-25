@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,7 +23,7 @@ function UpdatesSection2() {
         }}
         loop={true}
         autoplay={true}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
       >
         <SwiperSlide>
           <UpdateCard />
