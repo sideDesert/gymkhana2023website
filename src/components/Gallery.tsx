@@ -15,18 +15,20 @@ import "./Gallery.css";
 // import required modules
 
 export default function Gallery() {
-  const image1 = "images/gallery/0.jpg";
+  const image1 = "images/gallery/5.jpg";
   const image2 = "images/gallery/1.jpg";
-  const image3 = "images/gallery/2.jpg";
-  const image4 = "images/gallery/3.jpg";
-  const image5 = "images/gallery/4.jpg";
-  const images = [image1, image2, image3, image4, image5];
+  const image3 = "images/gallery/21.jpg";
+  const image4 = "images/gallery/22.jpg";
+  const image5 = "images/gallery/30.jpg";
+  const image6 = "images/gallery/28.jpg";
+
+  const images = [image5, image1, image3, image2, image4, , image6];
   return (
     <>
       <Swiper
         navigation={true}
         loop={true}
-        autoplay={true}
+        autoplay={{ delay: 5000 }}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
