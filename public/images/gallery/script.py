@@ -1,6 +1,17 @@
 from PIL import Image
+import os
 
-image = Image.open('31.jpg')
-image.thumbnail((800,800))
-image.save('31.jpg')
-print(image)
+def opt_images():
+    for i in range(31,59):
+        image = Image.open(f'{i}.jpg')
+        image.thumbnail((700,700))
+        image.save(f'{i}.jpg')
+        print(image.size)
+
+def rename():
+    i = 46
+
+    while i <= 58:
+        os.rename(f'{i}.jpg', f'{i-1}.jpg')
+        i+=1
+opt_images()

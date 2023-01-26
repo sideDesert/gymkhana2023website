@@ -19,7 +19,7 @@ export default function Gallery() {
   const image3 = "images/gallery/21.jpg";
   const image4 = "images/gallery/22.jpg";
   const image5 = "images/gallery/30.jpg";
-  const image6 = "images/gallery/58.jpg";
+  const image6 = "images/gallery/50.jpg";
   const image7 = "images/gallery/42.jpg";
   const image8 = "images/gallery/48.jpg";
   const image9 = "images/gallery/56.jpg";
