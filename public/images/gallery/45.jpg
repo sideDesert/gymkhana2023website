@@ -1,0 +1,5 @@
+import os
+i = 31
+for file in os.listdir():
+    os.rename(file, f'{i}.jpg')
+    i = i+1

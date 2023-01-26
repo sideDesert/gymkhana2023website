@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
@@ -20,9 +19,25 @@ export default function Gallery() {
   const image3 = "images/gallery/21.jpg";
   const image4 = "images/gallery/22.jpg";
   const image5 = "images/gallery/30.jpg";
-  const image6 = "images/gallery/28.jpg";
+  const image6 = "images/gallery/58.jpg";
+  const image7 = "images/gallery/42.jpg";
+  const image8 = "images/gallery/48.jpg";
+  const image9 = "images/gallery/56.jpg";
+  const image10 = "images/gallery/32.jpg";
 
-  const images = [image5, image1, image3, image2, image4, , image6];
+  const images = [
+    image5,
+    image1,
+    image3,
+    image2,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+  ];
   return (
     <>
       <Swiper
@@ -52,11 +67,11 @@ export default function Gallery() {
         }}
         autoHeight={true}
         modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
-        className="mySwiper text-black w-full h-auto "
+        className="mySwiper text-black w-full h-auto items-center justify-center"
       >
         {images.map((src, index) => {
           return (
-            <SwiperSlide className="bg-white">
+            <SwiperSlide className="bg-white items-center justify-center">
               <img src={src} alt="" />
             </SwiperSlide>
           );
