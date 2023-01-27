@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 function UpdatesSection2() {
   return (
-    <section className="bg-w px-0 pt-[1.5rem]  lg:pt-[3rem]">
+    <section className="bg-w px-0 pt-[1.5rem]  lg:pt-[3rem] mb-3">
       <div className="px-7">
         <div className="bg-r h-[6px] w-full self-center">
           <div className="bg-p h-[6px] w-16 ml-16"></div>
@@ -68,11 +68,11 @@ function UpdateCard({
   }
 
   return (
-    <div className="min-h-[500px] bg-white flex justify-center items-center flex-col md:flex-row md:grid md:grid-cols-5">
-      <div className="flex-shrink-0 md:col-span-2">
+    <div className="min-h-[500px] bg-white flex justify-center items-center flex-col md:flex-row md:grid md:grid-cols-5 2xl:grid-cols-7">
+      <div className="flex-shrink-0 md:col-span-2 2xl:col-span-3">
         <img src={imgUrl} alt={altText} className="object-cover" />
       </div>
-      <div className="p-8 md:col-span-3">
+      <div className="p-8 md:col-span-3 2xl:col-span-4">
         <h2 className="font-bold text-2xl pb-3">{title}</h2>
         <p>{desc}</p>
         <div className="py-2">

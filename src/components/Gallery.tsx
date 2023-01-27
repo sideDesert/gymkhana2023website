@@ -18,7 +18,7 @@ export default function Gallery() {
   const image2 = "images/gallery/1.jpg";
   const image3 = "images/gallery/21.jpg";
   const image4 = "images/gallery/22.jpg";
-  const image5 = "images/gallery/30.jpg";
+  const image5 = "images/gallery/31.jpg";
   const image6 = "images/gallery/50.jpg";
   const image7 = "images/gallery/42.jpg";
   const image8 = "images/gallery/48.jpg";
