@@ -71,7 +71,7 @@ export default function Gallery() {
       >
         {images.map((src, index) => {
           return (
-            <SwiperSlide className="bg-white items-center justify-center">
+            <SwiperSlide className="bg-white items-center !self-center">
               <img src={src} alt="" />
             </SwiperSlide>
           );
