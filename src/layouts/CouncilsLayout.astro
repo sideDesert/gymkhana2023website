@@ -116,6 +116,9 @@ const { title, desc, imgUrl }: Props = Astro.props;
   let options = document.querySelector("select");
   window.addEventListener("load", () => {
     newvalue = window.location.href.split("/");
+    if (newvalue[newvalue.length - 1] === "") {
+      newvalue.pop();
+    }
     newvalue = newvalue[newvalue.length - 1];
     options.value = newvalue;
   });
@@ -124,6 +127,9 @@ const { title, desc, imgUrl }: Props = Astro.props;
     url = new URL(window.location.href);
 
     new_url = url.toString().split("/");
+    if (new_url[new_url.length - 1] === "") {
+      new_url.pop();
+    }
     new_url.pop();
     new_url.push(options.value);
     new_url = new_url.join("/");
