@@ -46,6 +46,16 @@ const updates = [
     organiser: "Elan & ηVision - IITH",
     //venue: 'A LH 1',
   },
+  {
+    title: 'Culti Events: Elan & ηVision',
+    desc: 'Presenting to you all the culti events ..!!!\
+    Participants in the competition will have access to pronities.\
+    For registering for the events: https://elan.org.in/competitions',
+    img: '/images/updates section/culti.jpeg',
+    dateTime: 'February 17th, 18th and 19th, 2023',
+    organiser: 'Elan & ηVision - IITH',
+    //venue: 'A LH 1',
+  },
 ];
 
 export default updates;
