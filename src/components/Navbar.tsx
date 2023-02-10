@@ -1,30 +1,30 @@
-import React, { useEffect } from "react";
-import Logo from "../images/logo.png";
-import WhiteLogo from "../images/logowhite.png";
-import Menu from "../images/menu.svg";
-import { useState, useRef, useLayoutEffect, useCallback } from "react";
-import useOutsiderAlert from "../hooks/useOutsideAlert";
-import { gsap } from "gsap";
-import useScrollPosition from "../hooks/useScrollPosition";
+import React, { useEffect } from 'react';
+import Logo from '../images/logo.png';
+import WhiteLogo from '../images/logowhite.png';
+import Menu from '../images/menu.svg';
+import { useState, useRef, useLayoutEffect, useCallback } from 'react';
+import useOutsiderAlert from '../hooks/useOutsideAlert';
+import { gsap } from 'gsap';
+import useScrollPosition from '../hooks/useScrollPosition';
 import {
   councilChildren,
   eventsChildren,
   specialClubsChildren,
   moreChildren,
-} from "../constants/menuChildrenData";
+} from '../constants/menuChildrenData';
 
 const links = [
-  "Home",
-  "Office Bearers",
-  "Councils",
-  "Events",
-  "Special Clubs",
+  'Home',
+  'Office Bearers',
+  'Councils',
+  'Events',
+  'Special Clubs',
   "Student's Guide",
-  "IITH Map",
-  "Gallery",
-  "More",
-  "Election",
-  "Transparency",
+  'IITH Map',
+  'Gallery',
+  'More',
+  'Election',
+  'Transparency',
 ];
 
 interface LinkButton {
@@ -50,9 +50,9 @@ interface Link {
 }
 
 function LinkButton(props: LinkButton) {
-  const { type, children, href = "#", activateSubMenu, menuIndex } = props;
+  const { type, children, href = '#', activateSubMenu, menuIndex } = props;
 
-  if (type === "BUTTON") {
+  if (type === 'BUTTON') {
     return (
       <>
         <button
@@ -69,25 +69,25 @@ function LinkButton(props: LinkButton) {
 }
 
 const updatedLinks: Link[] = [
-  { parent: "Home", menuIndex: 0, href: "/" },
-  { parent: "Office Bearers", menuIndex: 1, href: "/office-bearers/" },
+  { parent: 'Home', menuIndex: 0, href: '/' },
+  { parent: 'Office Bearers', menuIndex: 1, href: '/office-bearers/' },
   {
-    parent: "Councils",
+    parent: 'Councils',
     children: councilChildren,
     menuIndex: 2,
-    href: "/councils/general",
+    href: '/councils/general',
   },
   {
-    parent: "Events",
+    parent: 'Events',
     children: eventsChildren,
     menuIndex: 3,
-    href: "/events/elan",
+    href: '/events/elan',
   },
-  { parent: "Organization Clubs", menuIndex: 4, href: "/special-clubs" },
-  { parent: "Student's Guide", menuIndex: 5, href: "/freshers-guide" },
+  { parent: 'Organization Clubs', menuIndex: 4, href: '/special-clubs' },
+  { parent: "Student's Guide", menuIndex: 5, href: '/freshers-guide' },
   // {parent:'IITH Map',menuIndex: 6, href:'/map'},
-  { parent: "Gallery", menuIndex: 6, href: "/gallery" },
-  { parent: "More", children: moreChildren, menuIndex: 7, href: "/more" },
+  { parent: 'Gallery', menuIndex: 6, href: '/gallery' },
+  { parent: 'More', children: moreChildren, menuIndex: 7, href: '/more' },
 ];
 
 export function Button(props: { children: string }) {
@@ -121,10 +121,10 @@ function MobileNavbar() {
 
   useLayoutEffect(() => {
     if (active) {
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflowY = 'hidden';
       gsap.from(mobileMenuRef.current, { autoAlpha: 0, stagger: 0.1 });
     } else {
-      document.body.style.overflowY = "auto";
+      document.body.style.overflowY = 'auto';
     }
   }, [active]);
 
@@ -137,17 +137,17 @@ function MobileNavbar() {
       scrollRef.current = getPosition();
       if (scrollRef.current <= prevScroll.current) {
         gsap.to(mobileNavbar.current, {
-          y: "0%",
+          y: '0%',
         });
       }
       if (scrollRef.current > prevScroll.current) {
         gsap.to(mobileNavbar.current, {
-          y: "-100%",
+          y: '-100%',
         });
       }
       prevScroll.current = scrollRef.current;
     }
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -224,15 +224,15 @@ function MainNavbar({ blackOn, disableAnimation }) {
 
   if (!disableAnimation) {
     if (scrollPosition > 0) {
-      gsap.to(navRef.current, { background: "white", color: "black" });
+      gsap.to(navRef.current, { background: 'white', color: 'black' });
     } else {
       gsap.to(navRef.current, {
-        backgroundColor: "transparent",
-        color: "white",
+        backgroundColor: 'transparent',
+        color: 'white',
       });
     }
   } else {
-    gsap.set(navRef.current, { background: "white" });
+    gsap.set(navRef.current, { background: 'white' });
   }
 
   return (
@@ -240,7 +240,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
       <nav
         ref={navRef}
         className={`fixed justify-between ${
-          blackOn ? "text-black bg-white" : "text-white bg-transparent"
+          blackOn ? 'text-black bg-white' : 'text-white bg-transparent'
         } px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row`}
       >
         <div className="inline-block">
@@ -267,7 +267,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
                   subLinks={el?.children}
                   menuIndex={el.menuIndex}
                   activateSubMenu={activateSubMenu}
-                  type={el.children ? "BUTTON" : "ANCHOR"}
+                  type={el.children ? 'BUTTON' : 'ANCHOR'}
                   href={el?.href}
                 >
                   {el.parent}
