@@ -29,12 +29,13 @@ const updates = [
     organiser: "Elan & ηVision",
   },
   {
-    title: "Jigyasa: A quiz on Indian heritage, culture and Sanskrit",
-    desc: "Every Indian Culture, Heritage and Samskrit enthusiast is most welcome to be a part of this event. The Quiz will test your knowledge and understanding of Indian Culture, Heritage, Samskrit in traditions, and Samskrit Bhasha. Students are requested to participate in the Quiz in groups of 3 to 5. This time we are coming up with an exciting prize pool of Rs.3500. You are encouraged to name your team as per the quiz theme.",
-    img: "/images/updates section/sanskrit.jpeg",
-    dateTime: "February 10th, 2023 (8:30 PM IST)",
-    organiser: "Samskritam - IITH",
-    venue: "A LH 2",
+    title: "Blackout Poetry",
+    desc: "The Writing Club is hosting a unique event that promises to be both entertaining and inspiring. On Monday, 13th February, the club invites all literary enthusiasts to join them for a Blackout Poetry and Open Mic Session. For those unfamiliar with the concept, Blackout Poetry involves taking a page from an existing text, such as a newspaper or a novel, and blacking out unrequired words to create a new poem. The process encourages creativity and is a new way of looking at the written word. \
+    There is also an opportunity for attendees to perform their own writing with the Open Mic Session. Whether you are a seasoned poet or just want to showcase your musings, this event promises to be an inclusive and encouraging space for all.",
+    img: "/images/updates section/blackout-poetry.jpeg",
+    dateTime: "February 13th, 2023 (9:00 PM IST)",
+    organiser: "The Writing Club",
+    venue: "A LH-1",
   },
   {
     title: "Irshaad",
@@ -47,23 +48,23 @@ const updates = [
     //venue: 'A LH 1',
   },
   {
-    title: 'Culti Events: Elan & ηVision',
-    desc: 'Presenting to you all the culti events ..!!!\
+    title: "Culti Events: Elan & ηVision",
+    desc: "Presenting to you all the culti events ..!!!\
     Participants in the competition will have access to pronities.\
-    For registering for the events: https://elan.org.in/competitions',
-    img: '/images/updates section/culti.jpeg',
-    dateTime: 'February 17th, 18th and 19th, 2023',
-    organiser: 'Elan & ηVision - IITH',
+    For registering for the events: https://elan.org.in/competitions",
+    img: "/images/updates section/culti.jpeg",
+    dateTime: "February 17th, 18th and 19th, 2023",
+    organiser: "Elan & ηVision - IITH",
     //venue: 'A LH 1',
   },
   {
-    title: 'Techy Events: Elan & ηVision',
-    desc: 'We present before you the ηVision part of our fest, Techy competition are there!\
+    title: "Techy Events: Elan & ηVision",
+    desc: "We present before you the ηVision part of our fest, Techy competition are there!\
 Get ready to participate in these amazing events and win exciting prizes.\
-Mark your calendars!',
-    img: '/images/updates section/techy.jpeg',
-    dateTime: 'February 17th, 18th and 19th, 2023',
-    organiser: 'Elan & ηVision - IITH',
+Mark your calendars!",
+    img: "/images/updates section/techy.jpeg",
+    dateTime: "February 17th, 18th and 19th, 2023",
+    organiser: "Elan & ηVision - IITH",
     //venue: 'A LH 1',
   },
 ];
