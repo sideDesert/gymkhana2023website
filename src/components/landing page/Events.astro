@@ -1,10 +1,9 @@
 ---
-import bgImage from '../../images/bg-events.jpg';
-import Card from './Card.astro';
-import ElanLogo from '../../images/Elan Logo.png';
-import MilanLogo from '../../images/Milan Logo.png';
-import DiestaLogo from '../../images/Diesta Logo.png';
-import ZozimusLogo from '../../images/zozimus.png';
+import bgImage from "../../images/bg-events.jpg";
+import Card from "./Card.astro";
+import ElanLogo from "../../images/Elan Logo.png";
+import MilanLogo from "../../images/Milan Logo.png";
+import ZozimusLogo from "../../../public/images/zozimus.png";
 ---
 
 <section class="relative min-h-[90vh] event-section">
@@ -28,19 +27,19 @@ import ZozimusLogo from '../../images/zozimus.png';
       class="card-container grid grid-cols-1 lg:grid-cols-3 justify-items-center md:mt-8 py-6 gap-9"
     >
       <Card
-        href={'/events/elan'}
+        href={"/events/elan"}
         logo={ElanLogo}
         eventName={`Elan & nVision`}
         desc="Elan & nVision is the annual techno cultural fest hosted by IIT Hyderabad, Elan represents the cultural part of the fest and nVision the technical part of the fest."
       />
       <Card
-        href={'/events/milan'}
+        href={"/events/milan"}
         logo={MilanLogo}
         eventName={`Milan`}
         desc="Milan is the annual techno-cultural-sports General Championship of IIT Hyderabad, conducted between all the hostel blocks."
       />
       <Card
-        href={'/events/zozimus'}
+        href={"/events/zozimus"}
         logo={ZozimusLogo}
         eventName="Zozimus"
         desc="It’s the Litfest! Time for Merriment and Jollification. In the words of Roald Dahl, “A little magic can take you a long way.”"
@@ -59,44 +58,44 @@ import ZozimusLogo from '../../images/zozimus.png';
 </section>
 
 <script>
-  const mlg = window.matchMedia('(min-width: 1024px)');
+  const mlg = window.matchMedia("(min-width: 1024px)");
   if (mlg.matches) {
     //timeline approach
     let tl = gsap.timeline();
-    tl.from('.event-card', {
-      border: '4px solid #07cebb00',
+    tl.from(".event-card", {
+      border: "4px solid #07cebb00",
       y: 20,
       duration: 1,
       stagger: 0.2,
     });
 
     tl.from(
-      '.event-card >*',
+      ".event-card >*",
       {
         autoAlpha: 0,
         stagger: 0.1,
       },
-      '<'
+      "<"
     );
 
     ScrollTrigger.create({
-      trigger: '.event-card',
+      trigger: ".event-card",
       animation: tl,
-      start: '+=30 +=68%',
-      toggleActions: 'restart none none reverse',
+      start: "+=30 +=68%",
+      toggleActions: "restart none none reverse",
     });
   } else {
-    const cards = document.querySelectorAll('.event-card');
+    const cards = document.querySelectorAll(".event-card");
     console.log;
     for (let card of cards) {
       gsap.from(card, {
         y: 20,
         autoAlpha: 0,
         duration: 1,
-        ease: 'power2.out',
+        ease: "power2.out",
         scrollTrigger: {
           trigger: card,
-          start: '+=30 +=80%',
+          start: "+=30 +=80%",
         },
       });
     }

@@ -32,7 +32,7 @@ const updates = [
     title: "Blackout Poetry",
     desc: "The Writing Club is hosting a unique event that promises to be both entertaining and inspiring. On Monday, 13th February, the club invites all literary enthusiasts to join them for a Blackout Poetry and Open Mic Session. For those unfamiliar with the concept, Blackout Poetry involves taking a page from an existing text, such as a newspaper or a novel, and blacking out unrequired words to create a new poem. The process encourages creativity and is a new way of looking at the written word. \
     There is also an opportunity for attendees to perform their own writing with the Open Mic Session. Whether you are a seasoned poet or just want to showcase your musings, this event promises to be an inclusive and encouraging space for all.",
-    img: "/images/updates section/blackout-poetry.jpeg",
+    img: "/images/updates section/blackout-poetry.jpg",
     dateTime: "February 13th, 2023 (9:00 PM IST)",
     organiser: "The Writing Club",
     venue: "A LH-1",
