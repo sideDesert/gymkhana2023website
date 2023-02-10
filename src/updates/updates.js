@@ -56,6 +56,16 @@ const updates = [
     organiser: 'Elan & ηVision - IITH',
     //venue: 'A LH 1',
   },
+  {
+    title: 'Techy Events: Elan & ηVision',
+    desc: 'We present before you the ηVision part of our fest, Techy competition are there!\
+Get ready to participate in these amazing events and win exciting prizes.\
+Mark your calendars!',
+    img: '/images/updates section/techy.jpeg',
+    dateTime: 'February 17th, 18th and 19th, 2023',
+    organiser: 'Elan & ηVision - IITH',
+    //venue: 'A LH 1',
+  },
 ];
 
 export default updates;
