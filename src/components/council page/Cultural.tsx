@@ -47,6 +47,9 @@ const clubLogos = {
   litsoc:
     'https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_293/v1671968750/media%20council/cultural%20clubs/litsoc_awwkkd.png',
   btl: '/public/images/councils/btl.jpg',
+  rang: '/public/images/councils/rdm.jpg',
+  shuffle: '/public/images/councils/shuffle.jpg',
+  gesture: '/public/images/councils/gesture.jpg',
 };
 
 const coords = {
