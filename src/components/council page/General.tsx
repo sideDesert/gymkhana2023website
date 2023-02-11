@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function General() {
-  const [councilState, setCouncilState] = useState("general");
+  const [councilState, setCouncilState] = useState('general');
   return (
     <>
       <div>
@@ -99,7 +99,7 @@ function General() {
             </address>
           </div>
           <div className="bg-white text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl border-[0.25rem] border-g">
-            <h4 className="italic text-p">Undergraduate Representative 2</h4>
+            <h4 className="italic text-p">Postgraduate Representative 2</h4>
             <h3 className="lg:text-2xl text-xl font-semibold text-black">
               Adamya Dubey
             </h3>
