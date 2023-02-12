@@ -11,6 +11,7 @@ import {
   ebsb,
   eml,
   tinkerer,
+  fcc,
 } from '../../components/special clubs/MobileView';
 
 const elanLogo =
@@ -54,6 +55,7 @@ const tinkererlogo = '#';
           <button data-club="tinkerer" class={buttonClass}>Tinkerers Lab</button
           >
         </li>
+        <li><button data-club="fcc" class={buttonClass}>FCC</button></li>
       </ul>
     </div>
   </div>
@@ -119,6 +121,14 @@ const tinkererlogo = '#';
       imgUrl={'/tinkerer.png'}
       desc={tinkerer}
       link={'https://www.linkedin.com/in/tinkerers-lab-iith-1298a4190/?originalSubdomain=in'}
+    />
+  </div>
+  <div data-clubinfo="fcc" class="hidden views">
+    <View
+      title="FCC"
+      imgUrl={'/fcc.png'}
+      desc={fcc}
+      link={'https://www.linkedin.com/company/finance-and-consulting-club-iit-hyderabad/?originalSubdomain=in'}
     />
   </div>
 </Layout>

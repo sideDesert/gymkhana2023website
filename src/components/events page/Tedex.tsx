@@ -1,17 +1,16 @@
-import React from "react";
-const dummy =
-  "https://moneyformeaning.com/wp-content/uploads/2019/09/tedx-logo.png";
-const bg = "https://www.tedxgangtok.com/assets/images/tedx-photo.jpg";
-import Options from "./Options";
+import React from 'react';
+const dummy = '/public/tedx.iithyderabad.jpg';
+const bg = 'https://www.tedxgangtok.com/assets/images/tedx-photo.jpg';
+import Options from './Options';
 
 function Tedex() {
   return (
     <section className="px-[2rem] py-[2rem] bg-[#000000d1] text-white relative lg:px-[7rem] lg:pt-[4rem] min-h-[100vh] lg:flex lg:flex-col lg:justify-center">
       <div className="w-full  h-[5rem]"></div>
-      <Options eventId={"ted-talks"} />
+      <Options eventId={'ted-talks'} />
       <div className="relative z-10">
         <h2 className="text-4xl font-semibold uppercase lg:text-[4rem] lg:font-bold">
-          Ted Talks
+          TedxIITHyderabad
         </h2>
       </div>
       <div className="lg:grid lg:grid-cols-5 lg:grow">
@@ -41,7 +40,7 @@ function Tedex() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {" "}
+              {' '}
               <button className=" scale-90 disabled text-xl bg-[#ff2b06] text-white px-4 py-3 rounded-lg">
                 Navigate to Website
               </button>

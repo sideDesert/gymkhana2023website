@@ -21,6 +21,9 @@ export const eml =
   'We, the Extra Mural Lectures team at IIT Hyderabad, work in bringing decorated personalities from eclectic domains on one platform to talk about various subjects like art, social work, economics, psychology, sports, science etc and inspire our IIT Hyderabad fraternity with insights that they could induce in their lives. LEARN BEYOND THE FOUR WALLS OF CLASSROOM';
 export const tinkerer =
   'At TL IITH we believe tinkering is the way to innovation, our aim is to provide a platform to bootstrap a culture of genuine excitement regarding science and technology. We try to cultivate a hands-on approach to entrepreneurship, such that leaders thus created are ready to face and solve the problems of the future.';
+export const fcc =
+  'The Finance and Consulting Club at IIT Hyderabad is a student-run organization that aims to provide opportunities to students interested in finance and consulting to learn about these fields and explore career options in these areas. We believe in knowledge sharing, and strive towards building an active community around finance & management.\
+FCC organizes sessions covering diverse topics like personal finance, stock markets, quantitative research, business case studies and product management. We also focus on increasing awareness around career opportunities in finance and management for IITH students.';
 
 function MobileView() {
   return (
@@ -57,7 +60,7 @@ function MobileView() {
         </SwiperSlide>
         <SwiperSlide>
           <Card
-            title="Tedx IIT Hyderabad"
+            title="TedxIITHyderabad"
             desc={tedx}
             imgUrl={
               'https://res.cloudinary.com/dwsverefw/image/upload/v1672775489/media%20council/orgs/t-org_g1scrw.jpg'
@@ -100,6 +103,9 @@ function MobileView() {
         </SwiperSlide>
         <SwiperSlide>
           <Card title="Tinkerers Lab" imgUrl="/tinkerer.png" desc={eml}></Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card title="FCC" imgUrl="/fcc.png" desc={fcc}></Card>
         </SwiperSlide>
       </Swiper>
     </div>

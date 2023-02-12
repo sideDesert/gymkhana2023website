@@ -57,7 +57,7 @@ function Options({ eventId }) {
         <option value="elan">Elan & nVision</option>
         <option value="e-summit">E-Summit</option>
         <option value="milan">Milan</option>
-        <option value="ted-talks">Ted-Talks</option>
+        <option value="ted-talks">TedxIITHyderabad</option>
         <option value="zozimus">Zozimus</option>
         <option value="abhyant">Abhyant</option>
         <option value="diesta">Diesta</option>
