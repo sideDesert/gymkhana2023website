@@ -8,15 +8,15 @@ const updates = [
   //   dateTime: 'February 18th, 2023 (11:30 AM IST)',
   //   organiser: 'Elan & ηVision',
   // },
-  {
-    title: 'Bohemian Rhapsody',
-    desc: 'Qurve is delighted to invite you to our next event, in collaboration with BMC, FRIDAY MOVIE NIGHT! \
-    We will be screening Bohemian Rhapsody (2018), a biographical music about Freddy Mercury, the lead singer of the rock band Queen. Join us with friends, snacks, blankets and enjoy the movie together!',
-    img: '/images/updates section/bohemian.jpeg',
-    dateTime: 'February 24th, 2023 (9:00 pM IST)',
-    organiser: 'Qurve and BMC',
-    venue: 'B113 and B115',
-  },
+  // {
+  //   title: 'Bohemian Rhapsody',
+  //   desc: 'Qurve is delighted to invite you to our next event, in collaboration with BMC, FRIDAY MOVIE NIGHT! \
+  //   We will be screening Bohemian Rhapsody (2018), a biographical music about Freddy Mercury, the lead singer of the rock band Queen. Join us with friends, snacks, blankets and enjoy the movie together!',
+  //   img: '/images/updates section/bohemian.jpeg',
+  //   dateTime: 'February 24th, 2023 (9:00 pM IST)',
+  //   organiser: 'Qurve and BMC',
+  //   venue: 'B113 and B115',
+  // },
 ];
 
 export default updates;
