@@ -1,10 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
-import updates from "../updates/updates";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper';
+import updates from '../updates/updates';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 function UpdatesSection2() {
   return (
@@ -43,25 +43,25 @@ function UpdatesSection2() {
 }
 
 const additionalDetails = [
-  "organiser",
-  "topic",
-  "speaker",
-  "dateTime",
-  "venue",
-  "preRequisite",
+  'organiser',
+  'topic',
+  'speaker',
+  'dateTime',
+  'venue',
+  'preRequisite',
 ];
 
 function UpdateCard({
-  imgUrl = "",
-  altText = "",
-  desc = "",
-  title = "",
-  organiser = "",
-  topic = "",
-  speaker = "",
-  dateTime = "",
-  venue = "",
-  preRequisite = "",
+  imgUrl = '',
+  altText = '',
+  desc = '',
+  title = '',
+  organiser = '',
+  topic = '',
+  speaker = '',
+  dateTime = '',
+  venue = '',
+  preRequisite = '',
 }) {
   function isThere(param) {
     return !(param.length === 0);
