@@ -1,4 +1,17 @@
-const updates = [];
+const updates = [
+  {
+    imgUrl: 'images/updates section/diesta-open.jpg',
+    //altText = '',D:\gymkhana2023website\public\images\updates section\diesta-open.jpg
+    //desc = '',
+    title: 'DJ and Icecream Night Party',
+    organiser: 'Diesta',
+    //topic = '',
+    //speaker = '',
+    dateTime: '25th March 2023 - 8 pm',
+    venue: 'Near Mess Lawns',
+    //preRequisite = '',
+  },
+];
 
 //fetching updates
 const PROJECT_ID = 'w2t1mzvp';
