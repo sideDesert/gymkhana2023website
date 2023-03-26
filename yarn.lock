@@ -530,6 +530,11 @@
     "get-it" "^8.0.9"
     "pkg-dir" "^5.0.0"
 
+"@sanity/image-url@^1.0.2":
+  "integrity" "sha512-C4+jb2ny3ZbMgEkLd7Z3C75DsxcTEoE+axXQJsQ75ou0AKWGdVsP351hqK6mJUUxn5HCSlu3vznoh7Yljye4cQ=="
+  "resolved" "https://registry.npmjs.org/@sanity/image-url/-/image-url-1.0.2.tgz"
+  "version" "1.0.2"
+
 "@types/acorn@^4.0.0":
   "integrity" "sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ=="
   "resolved" "https://registry.npmjs.org/@types/acorn/-/acorn-4.0.6.tgz"

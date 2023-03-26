@@ -1,6 +1,6 @@
-const updates = {
+export default {
   name: 'update',
-  type: 'object',
+  type: 'document',
   title: 'Update',
   fields: [
     {
@@ -14,14 +14,17 @@ const updates = {
       title: 'Organiser',
     },
     {
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+      option: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'desc',
       type: 'string',
       title: 'Description',
-    },
-    {
-      name: 'img',
-      type: 'image',
-      title: 'Image',
     },
     {
       name: 'venue',
@@ -33,7 +36,15 @@ const updates = {
       type: 'string',
       title: 'Date and Time',
     },
+    {
+      name: 'topic',
+      type: 'string',
+      title: 'Topic',
+    },
+    {
+      name: 'speaker',
+      type: 'string',
+      title: 'Speaker',
+    },
   ],
 }
-
-export default updates

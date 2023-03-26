@@ -1,12 +1,37 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper';
-import updates from '../updates/updates';
+import { useState, useEffect } from 'react';
+
+//sanity
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+let PROJECT_ID = '5hnrc2nv';
+let DATASET = 'production';
+let QUERY = encodeURIComponent('*[_type == "update"]');
+
+// Compose the URL for your project's endpoint and add the query
+export let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+
 function UpdatesSection2() {
+  const [updates, setUpdates] = useState([]);
+  useEffect(() => {
+    async function getData() {
+      const res = await fetch(URL);
+      const data = await res.json();
+      const { result } = await data;
+      //console.log(result);
+      for (let node of result) {
+      }
+      setUpdates(result);
+    }
+    getData();
+  }, []);
+  // useEffect(() => {
+  //   console.log(updates[0]?.image.asset._ref);
+  // }, [updates]);
   return (
     <section className="bg-w px-0 pt-[1.5rem]  lg:pt-[3rem] mb-[1.25rem]">
       <div className="px-7">
@@ -26,17 +51,26 @@ function UpdatesSection2() {
         modules={[Pagination, Autoplay]}
         autoHeight={true}
       >
-        {updates.map((data) => (
-          <SwiperSlide key={data.title}>
-            <UpdateCard
-              {...data}
-              imgUrl={data.img}
-              altText={data.title}
-              desc={data.desc}
-              title={data.title}
-            />
-          </SwiperSlide>
-        ))}
+        {updates &&
+          updates.map((data) => {
+            let imgUrl = `https:/cdn.sanity.io/images/${PROJECT_ID}/${DATASET}/${data?.image?.asset?._ref}`;
+            imgUrl = imgUrl.replace('/image-', '/');
+            imgUrl = imgUrl.replace('-jpg', '.jpg');
+            imgUrl = imgUrl.replace('-jpeg', '.jpeg');
+            imgUrl = imgUrl.replace('-png', '.png');
+            imgUrl = imgUrl.replace('-HEIC', '.heic');
+            return (
+              <SwiperSlide key={data.title}>
+                <UpdateCard
+                  {...data}
+                  imgUrl={imgUrl}
+                  altText={data.title}
+                  desc={data.desc}
+                  title={data.title}
+                />
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </section>
   );
