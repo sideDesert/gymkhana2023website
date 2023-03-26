@@ -22,7 +22,6 @@ function UpdatesSection2() {
       const res = await fetch(URL);
       const data = await res.json();
       const { result } = await data;
-      //console.log(result);
       for (let node of result) {
       }
       setUpdates(result);
