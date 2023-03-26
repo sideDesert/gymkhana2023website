@@ -52,7 +52,7 @@ function UpdatesSection2() {
       >
         {updates &&
           updates.map((data) => {
-            let imgUrl = `https:/cdn.sanity.io/images/${PROJECT_ID}/${DATASET}/${data?.image?.asset?._ref}`;
+            let imgUrl = `https://cdn.sanity.io/images/${PROJECT_ID}/${DATASET}/${data?.image?.asset?._ref}`;
             imgUrl = imgUrl.replace('/image-', '/');
             imgUrl = imgUrl.replace('-jpg', '.jpg');
             imgUrl = imgUrl.replace('-jpeg', '.jpeg');

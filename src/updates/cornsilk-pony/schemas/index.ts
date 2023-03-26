@@ -1,3 +1,3 @@
-import updates from './gymkhana-updates'
+import updates from './production'
 
 export const schemaTypes = [updates]
