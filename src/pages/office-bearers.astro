@@ -6,6 +6,10 @@ import gym2019 from '../constants/gymkhanaData/2019.json';
 import gym2020 from '../constants/gymkhanaData/2020.json';
 import gym2021 from '../constants/gymkhanaData/2021.json';
 import gym2022 from '../constants/gymkhanaData/2022.json';
+import gym2023 from '../constants/gymkhanaData/2023.json';
+import Loader from '../components/Loader.astro';
+
+
 
 interface card {
   name: string;
@@ -21,6 +25,7 @@ interface officeBearersObject {
 }
 
 const officeBearers: officeBearersObject = {
+  2023: gym2023,
   2022: gym2022,
   2021: gym2021,
   2020: gym2020,
@@ -29,7 +34,7 @@ const officeBearers: officeBearersObject = {
 };
 
 const imgId = {
-  President: 'president.jpg',
+  'President': 'president.jpg',
   'General Secretary 1': 'gen1.jpg',
   'General Secretary 2': 'gen2.jpg',
   'Student Welfare Secretary': 'welfare.jpg',
@@ -50,21 +55,23 @@ const imgId = {
   'Mess Secretary': 'mess.jpg',
   'Milan Overall Coordinator': 'milan.jpg',
   'Transport Head': 'transport.jpg',
+  'Alumni Secretary': 'alumni.jpg',
   'Transport Head 1': 'transport1.jpg',
   'Transport Head 2': 'transport2.jpg',
-  'Cultural and Literary Secretary': 'cultural.jpg',
   'Elan & nVision Overall Coordinator': 'elan.jpg',
 };
-import Loader from '../components/Loader.astro';
 ---
 
-<!-- <Loader client:load title='Office Bearers IITH Gymkhana' text='Loading Images...'/> -->
+<Loader client:load title='Office Bearers IITH Gymkhana' text='Loading Images...'/>
 <Layout title="Office Bearers" blackOn={true}>
   <div class="py-8 px-6 bg-p">
     <ul class="lg:flex flex-row gap-8 hidden text-white text-xl button-parent">
       <li class="">
-        <button data-year="2022" class="year-button active inactive"
+        <button data-year="2023" class="year-button active inactive"
           >Current Office</button>
+      </li>
+      <li class="">
+        <button data-year="2022" class="year-button inactive">2022-23</button>
       </li>
       <li class="">
         <button data-year="2021" class="year-button inactive">2021-22</button>
@@ -83,7 +90,8 @@ import Loader from '../components/Loader.astro';
       name="year"
       class="text-md lg:hidden p-3 bg-white text-p overflow-hidden rounded-md dropdown"
     >
-      <option value="2022" class="">Current Office</option>
+      <option value="2023" class="">Current Office</option>
+      <option value="2022">2022-23</option>
       <option value="2021">2021-22</option>
       <option value="2020">2020-21</option>
       <option value="2019">2019-20</option>
@@ -97,7 +105,7 @@ import Loader from '../components/Loader.astro';
     <h2
       class="text-white font-semibold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
     >
-      Office Bearers <span class="year-text">2022-23</span>
+      Office Bearers <span class="year-text">2023-24</span>
     </h2>
     {
       Object.keys(officeBearers).map((year, index) => {
@@ -155,7 +163,7 @@ import Loader from '../components/Loader.astro';
 
   //for setting all cards invisible
 
-  let activeYear = '2022';
+  let activeYear = '2023';
   function showOfficeForCurrentYear() {
     const section = document.querySelectorAll('section');
     for (let i = 0; i < section.length; i++) {
