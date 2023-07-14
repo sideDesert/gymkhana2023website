@@ -19,11 +19,11 @@ const clubs: club[] = [
   },
   {
     name: "elektronica",
-    desc: "Elektronica is the de facto electronics, artificial intelligence andmachine learning club of IIT Hyderabad.This is the platform for our students to dream innovative practical projects and achieve them. We strive to create interest in the students for electronics..",
+    desc: "Elektronika is the de facto electronics, artificial intelligence andmachine learning club of IIT Hyderabad.This is the platform for our students to dream innovative practical projects and achieve them. We strive to create interest in the students for electronics..",
   },
   {
     name: "kludge",
-    desc: 'Welcome to VIBES - The music club of IITH! We conduct regular jamming sessions, guitar sessions, vocal sessions etc. to encourage learning new things and having fun. We want to bring out the musician in everyone. Join us if you love to sing, play or write music! Vibes was the winner of the "Best Cultural Club" title in the year 2017-18!',
+    desc: "Welcome to Kludge, the information security and networking club of IIT Hyderabad - Our mission is to provide a forum for students to explore and deepen their understanding of the fields of information security and networking. Through a variety of events, workshops, and talks, we aim to foster a community of learners and practitioners who are passionate about these rapidly evolving fields. The world of information security and networking can be daunting, but here at Kludge, we’re here to help.",
   },
   {
     name: "infero",
@@ -32,6 +32,10 @@ const clubs: club[] = [
   {
     name: "lambda",
     desc: "We are the software development club of IITH. We build solutions and help others to do the same. Contributing to a quality piece of open source software can be a great learning experience. Keeping this in mind Hacktoberfest is conducted every year. It is open to everyone and is aimed to encourage involvement in the open source community.",
+  },
+  {
+    name: "epoch",
+    desc: "Epoch is the AI & Machine Learning of IIT Hyderabad, we conduct events and workshops, hold lectures and talks, and even host Kaggle competitions and hackathons. We create a platform that allows students to gain assistance and mentorship to enhance their AI & ML skills. Our aim is to propagate the enthusiasm for AI & ML in the institute and especially amongst freshmen. The secret of getting ahead is getting started and we aim to provide every student with the right start.",
   },
   {
     name: "prakriti",
@@ -63,99 +67,237 @@ const clubLogos = {
   torque: "https://scitech-iith.netlify.app/images/torque_logo.png",
   glitch:
     "https://static-cdn.jtvnw.net/jtv_user_pictures/e91b853c-5709-4786-afc3-01e956dfbea5-profile_image-300x300.png",
+  epoch: "https://avatars.githubusercontent.com/u/55585020?s=200&v=4"
 };
 
 const coords = {
   cepheid: [
     {
-      name: "Rushikesh Nilapalle",
-      roll: "es20btech11022",
-      position: "Coordinator",
+      name: "Kunj Panchal",
+      roll: "EP21BTECH11017",
+      position: "Overall Head",
     },
     {
-      name: "Ambica Govind",
-      roll: "ep21btech11007",
-      position: "Coordinator",
+      name: "Aman Bhasin",
+      roll: "ES21BTECH11006",
+      position: "Events Head",
+    },
+    {
+      name: "Abhijit Sambhaji Kasle",
+      roll: "EP21BTECH11002",
+      position: "Media & PR Head",
+    },
+    {
+      name: "Pragya Yadav",
+      roll: "CH21BTECH11023",
+      position: "Inbound Head",
     },
   ],
   aero: [
     {
-      name: "Aditya Pillai",
-      roll: "ME20BTECH11002".toLowerCase(),
-      position: "Coordinator",
+      name: "Chinmay Kushwaha",
+      roll: "CH21BTECH11010",
+      position: "Head",
     },
-    { name: "Arpita Gautam", roll: "ME20BTECH11008", position: "Coordinator" },
-    { name: "Amaan", roll: "EP20BTECH11003", position: "Coordinator" },
+    {
+      name: "Mohammed Areeb Hussain",
+      roll: "ME21BTECH11033",
+      position: "Head",
+    },
+    {
+      name: "Baratam Sai Krishna Girish",
+      roll: "EE21BTECH11007",
+      position: "Head",
+    },
   ],
   infero: [
     {
-      name: "Gautham Bellamkonda",
-      roll: "cs20btech11017",
-      position: "Coordinator",
+      name: "Aayush Kumar",
+      roll: "CO21BTECH11001",
+      position: "Head",
     },
     {
-      name: "Perambuduri Srikaran",
-      roll: "ai20btech11018",
-      position: "Coordinator",
+      name: "Ankit Saha",
+      roll: "AI21BTECH11004",
+      position: "Head",
     },
-    { name: "Varad Yergole", roll: "ch20btech11038", position: "Coordinator" },
   ],
   lambda: [
-    { name: "Aayush Patel", roll: "cs20btech11001", position: "Coordinator" },
-    { name: "Vikhyath", roll: "cs20btech11056", position: "Coordinator" },
+    {
+      name: "Kushagra Gupta",
+      roll: "CS21BTECH11033",
+      position: "Overall Head",
+    },
+    {
+      name: "Kartheek Sriram Tammana",
+      roll: "CS21BTECH11028",
+      position: "Overall Head",
+    },
+    {
+      name: "Jaswanth Beere",
+      roll: "BM21BTECH11007",
+      position: "Overall Head",
+    },
+    {
+      name: "Varun Gupta",
+      roll: "CS21BTECH11060",
+      position: "App Development Head",
+    },
   ],
   elektronica: [
-    { name: "Ameya Chatur", roll: "bm20btech11002", position: "Coordinator" },
     {
-      name: "Yenugula Hashish",
-      roll: "ee20btech11056",
-      position: "Coordinator",
+      name: "Boora Jagadeep",
+      roll: "BM21BTECH11008",
+      position: "Head",
+    },
+    {
+      name: "A P Vaideeswaran",
+      roll: "EE21BTECH11001",
+      position: "Head",
+    },
+    {
+      name: "Sathwik Banala",
+      roll: "EE21BTECH11049",
+      position: "Head",
     },
   ],
   robotix: [
-    { name: "Atharv Ramesh", roll: "ee20btech11006", position: "Coordinator" },
-    { name: "Anurag Manda", roll: "ee20btech11027", position: "Coordinator" },
-    { name: "Samar Singhai", roll: "bm20btech11012", position: "Coordinator" },
+    {
+      name: "Rudransh Mishra",
+      roll: "AI21BTECH11025",
+      position: "Overall Head",
+    },
+    {
+      name: "Harshal Verma",
+      roll: "AI21MTECH02003",
+      position: "Overall Head",
+    },
+    {
+      name: "Pratik Nikam",
+      roll: "EE21BTECH11037",
+      position: "Embedded Systems and Electronics Head",
+    },
+    {
+      name: "Rajapu Jayachandra Naidu",
+      roll: "CS21BTECH11050",
+      position: "Software Head",
+    },
+    {
+      name: "Ayush Kumar Singh",
+      roll: "AI20BTECH11028",
+      position: "Machine Learning Head",
+    },
+    {
+      name: "Mehul Srivastava",
+      roll: "ME21BTECH11032",
+      position: "Mechanical Modelling Head",
+    },
   ],
   torque: [
-    { name: "Harsh Jaiswal", roll: "ce20btech11013", position: "Coordinator" },
-    { name: "Saket Kumar", roll: "ch20btech11030", position: "Coordinator" },
+    {
+      name: "Pruthvi Raj Asampalli ",
+      roll: "ES20BTECH11005",
+      position: "Head",
+    },
+    {
+      name: "Bevara Rohit",
+      roll: "EE21BTECH11009",
+      position: "Head",
+    },
+    {
+      name: "Malakala Chaitanya",
+      roll: "ME21BTECH11030",
+      position: "Head",
+    },
   ],
   epoch: [
     {
-      name: "Ayush Kumar Singh",
-      roll: "ai20btech11028",
-      position: "Coordinator",
+      name: "Tejadhith Sankar",
+      roll: "EE21BTECH11055",
+      position: "Overall Head",
     },
     {
-      name: "Anirudh Srinivasan",
-      roll: "cs20btech11059",
-      position: "Coordinator",
+      name: "Arvind Roshaan",
+      roll: "AI21MTECH12004",
+      position: "Overall Head",
     },
+    {
+      name: "Vaishnavi W",
+      roll: "AI20BTECH11025",
+      position: "Computer Vision Head",
+    },
+    {
+      name: "Shreykumar Dineshchandra Satapara",
+      roll: "AI22MTECH02003 ",
+      position: "Natural Langauage Processing Head",
+    },
+    {
+      name: "Mannem Charan",
+      roll: "AI21BTECH11019",
+      position: "Reinforcement Learning Head",
+    },
+    {
+      name: "Donal Loitam",
+      roll: "AI21BTECH11009",
+      position: "Data Science and Data Mining Head",
+    },
+    {
+      name: "Prajwaldeep Kamble",
+      roll: "MA20BTECH11013",
+      position: "Data Science and Data Mining Head",
+    },
+    
   ],
   glitch: [
-    { name: "Raghav Ambati", roll: "ma20btech11022", position: "Coordinator" },
-    { name: "Vishal Datta", roll: "es20btech11009", position: "Coordinator" },
-    { name: "Ojjas Tyagi", roll: "cs20btech11060", position: "Coordinator" },
+    {
+      name: "Tatparya Kshatriya",
+      roll: "MS21BTECH11029",
+      position: "Overall Head",
+    },
+    {
+      name: "Pranav Balasubramanian",
+      roll: "AI21BTECH11023",
+      position: "Esports Head",
+    },
   ],
   kludge: [
     {
-      name: "Vks Deepak Reddy",
-      roll: "ma20btech11019",
-      position: "Coordinator",
+      name: "K Saravanan",
+      roll: "CS22MTECH12007",
+      position: "Head",
     },
     {
-      name: "Syed Saqib Habeeb",
-      roll: "bm20btech11015",
-      position: "Coordinator",
+      name: "Abhinav Yadav",
+      roll: "CS21BTECH11002",
+      position: "Head",
+    },
+    {
+      name: "Rajiv Shailesh Chitale",
+      roll: "CS21BTECH11051",
+      position: "Head",
     },
   ],
+
   prakriti: [
-    { name: "Trishna Gunna", roll: "me21btech11018", position: "Coordinator" },
     {
-      name: "Vishnupriya Yarramasu",
-      roll: "ce20btech11046",
-      position: "Coordinator",
+      name: "Yapamanu Ujwal Sai Simha",
+      roll: "ME20BTECH11056",
+      position: "Overall Head",
+    },
+    {
+      name: "Pindi Visishta",
+      roll: "CE21BTECH11032",
+      position: "Events Head",
+    },
+    {
+      name: "Katherapaka Nikhil",
+      roll: "EE22BTECH11028",
+      position: "Projects Head",
+    },
+    {
+      name: "Vighnesh Sreepathi",
+      roll: "IC21BTECH11009",
+      position: "Media and PR Head",
     },
   ],
 };
@@ -191,11 +333,11 @@ function Scitech() {
           <div className="bg-white text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl border-[0.25rem] border-g">
             <h4 className=" text-p">Science and Technology Secretary </h4>
             <h3 className="lg:text-2xl text-xl font-semibold text-black">
-              Kotha Harshith
+              Bapatu Manoj Kumar Reddy
             </h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 9618365084
+                +91 7569521250
               </h4>
               <a
                 href="mailto:scitech_secy@gymkhana.iith.ac.in"
@@ -249,6 +391,7 @@ function Scitech() {
             >
               Kludge
             </li>
+
             <li
               className={`text-p ${club === "infero" ? "" : "text-opacity-40"}`}
               onClick={() => {
@@ -264,6 +407,14 @@ function Scitech() {
               }}
             >
               Lambda
+            </li>
+            <li
+              className={`text-p ${club === "epoch" ? "" : "text-opacity-40"}`}
+              onClick={() => {
+                setClub("epoch");
+              }}
+            >
+              Epoch
             </li>
             <li
               className={`text-p ${
@@ -311,7 +462,7 @@ function Scitech() {
                     <TCard
                       name={coord.name}
                       mobile={""}
-                      position={"Coordinator"}
+                      position={coord.position}
                       email={coord.roll.toLowerCase() + "@iith.ac.in"}
                       activePosition="Coordinator"
                     />
